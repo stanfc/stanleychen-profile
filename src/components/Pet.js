@@ -12,7 +12,7 @@ const Pet = () => {
     if (!pet || !container) return;
 
     // 寵物速度配置
-    const SPEED = 2; // 等速移動的速度 (像素/幀)
+    const SPEED = 1; // 等速移動的速度 (像素/幀)
     const STOP_DISTANCE = 5; // 停止追蹤的距離
 
     let bounds = container.getBoundingClientRect();
@@ -25,24 +25,19 @@ const Pet = () => {
     let targetY = 0;
     let isMoving = false;
 
-    // 垂直和水平移動動畫函數
+    // 等速移動動畫函數
     const animate = () => {
       if (isMoving) {
         // 計算距離
         const dx = targetX - petX;
         const dy = targetY - petY;
-        const distanceX = Math.abs(dx);
-        const distanceY = Math.abs(dy);
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // 優先移動距離較大的方向
-        if (distanceX > STOP_DISTANCE || distanceY > STOP_DISTANCE) {
-          if (distanceX > distanceY) {
-            // 水平移動
-            petX += dx > 0 ? SPEED : -SPEED;
-          } else {
-            // 垂直移動
-            petY += dy > 0 ? SPEED : -SPEED;
-          }
+        if (distance > STOP_DISTANCE) {
+          // 等速移動
+          const angle = Math.atan2(dy, dx);
+          petX += Math.cos(angle) * SPEED;
+          petY += Math.sin(angle) * SPEED;
           
           pet.style.transform = `translate(${petX}px, ${petY}px)`;
           requestAnimationFrame(animate);
