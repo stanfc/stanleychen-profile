@@ -1,7 +1,7 @@
 .timeline-item {
   margin-bottom: 25px;
   padding-left: 20px;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid var(--primary-color);
   position: relative;
 }
 
@@ -12,14 +12,14 @@
   top: 5px;
   width: 12px;
   height: 12px;
-  background: #667eea;
+  background: var(--primary-color);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 0 0 4px var(--shadow-primary);
 }
 
 .timeline-date {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white;
+  background: var(--primary-gradient);
+  color: var(--white);
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.9em;
@@ -29,17 +29,47 @@
 
 .timeline-title {
   font-weight: bold;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 5px;
 }
 
 .timeline-company {
-  color: #667eea;
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 .timeline-description {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
+}
+
+/* 經驗區塊靈活佈局 */
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+.experience-grid .timeline-item {
+  margin-bottom: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .experience-grid .timeline-item {
+    margin-bottom: 25px;
+    grid-row: auto !important;
+    grid-column: auto !important;
+  }
 } 

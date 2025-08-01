@@ -5,8 +5,8 @@
 }
 
 .skill-item {
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white;
+  background: var(--primary-gradient);
+  color: var(--white);
   padding: 15px;
   border-radius: 15px;
   text-align: center;
@@ -18,5 +18,52 @@
 
 .skill-item:hover {
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 15px 30px var(--shadow-primary-strong);
+}
+
+/* 新的分類技能樣式 */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-item-small {
+  background: var(--primary-gradient);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  will-change: transform;
+  white-space: nowrap;
+}
+
+.skill-item-small:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px var(--shadow-primary);
 } 

@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../assets/profile_image.jpg';
 
 const Header = ({ currentLang }) => {
   const content = {
@@ -15,11 +16,17 @@ const Header = ({ currentLang }) => {
   return (
     <header className="header">
       <img 
-        src="/profile_image.jpg" 
+        src={profileImage}
         alt="Profile" 
         className="profile-img"
         loading="eager"
         decoding="async"
+        onError={(e) => {
+          console.error('Image failed to load:', e.target.src);
+        }}
+        onLoad={() => {
+          console.log('Image loaded successfully');
+        }}
       />
       <h1 className="name">陳璿修</h1>
       <p className="title">{content[currentLang].title}</p>

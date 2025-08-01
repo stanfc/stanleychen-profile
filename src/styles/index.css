@@ -1,3 +1,6 @@
+/* 匯入變數 */
+@import './variables.css';
+
 /* 匯入所有樣式檔案 */
 @import './global.css';
 @import './header.css';

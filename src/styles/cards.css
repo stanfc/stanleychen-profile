@@ -1,21 +1,21 @@
 .card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-secondary);
   backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px var(--shadow-light);
+  border: 1px solid var(--border-overlay);
   transition: all 0.3s ease;
   will-change: transform;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 30px 60px var(--shadow-medium);
 }
 
 .card h2 {
-  color: #667eea;
+  color: var(--primary-color);
   margin-bottom: 20px;
   font-size: 1.8em;
   display: flex;
@@ -26,18 +26,18 @@
 .section-icon {
   width: 30px;
   height: 30px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: var(--primary-gradient);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
   font-size: 16px;
 }
 
 .about-text {
   font-size: 1.1em;
   line-height: 1.8;
-  color: #555;
+  color: var(--text-light);
   text-align: justify;
 } 

@@ -8,7 +8,6 @@ import Education from './components/Education';
 import WorkExperience from './components/WorkExperience';
 import TechnicalSkills from './components/TechnicalSkills';
 import Experience from './components/Experience';
-import CertificationsAwards from './components/CertificationsAwards';
 
 function App() {
   const [currentLang, setCurrentLang] = useState('zh');
@@ -41,11 +40,10 @@ function App() {
         
         <div className="main-content">
           <AboutMe currentLang={currentLang} />
+          <TechnicalSkills currentLang={currentLang} />
           <Education currentLang={currentLang} />
           <WorkExperience currentLang={currentLang} />
-          <TechnicalSkills currentLang={currentLang} />
           <Experience currentLang={currentLang} />
-          <CertificationsAwards currentLang={currentLang} />
         </div>
       </div>
     </div>
