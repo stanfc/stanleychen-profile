@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/stanleychen-profile/static/css/main.43efcf34.css",
+    "main.js": "/stanleychen-profile/static/js/main.38dcd737.js",
+    "static/js/453.82ff5c0b.chunk.js": "/stanleychen-profile/static/js/453.82ff5c0b.chunk.js",
+    "index.html": "/stanleychen-profile/index.html",
+    "main.43efcf34.css.map": "/stanleychen-profile/static/css/main.43efcf34.css.map",
+    "main.38dcd737.js.map": "/stanleychen-profile/static/js/main.38dcd737.js.map",
+    "453.82ff5c0b.chunk.js.map": "/stanleychen-profile/static/js/453.82ff5c0b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43efcf34.css",
+    "static/js/main.38dcd737.js"
+  ]
+}
