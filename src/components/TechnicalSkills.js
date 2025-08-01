@@ -8,7 +8,7 @@ const TechnicalSkills = ({ currentLang }) => {
         programming: "程式語言",
         frameworks: "框架工具",
         development: "開發領域",
-        creative: "創意工具"
+        other: "其他技能"
       }
     },
     en: {
@@ -17,16 +17,16 @@ const TechnicalSkills = ({ currentLang }) => {
         programming: "Programming Languages",
         frameworks: "Frameworks & Tools",
         development: "Development Areas",
-        creative: "Creative Tools"
+        other: "Other Skills"
       }
     }
   };
 
   const skillsByCategory = {
     programming: ['C/C++', 'Python', 'Java', 'C#', 'JavaScript', 'HTML', 'SQL'],
-    frameworks: ['React.js', 'Node.js', 'Django', 'Git', 'Docker'],
-    development: ['Backend development', 'Frontend development', 'Database', 'ML', 'Gen AI', 'Computer vision'],
-    creative: ['Unity', 'Blender', 'Rendering', 'VFX', 'Game programming']
+    frameworks: ['Django', 'React.js', 'Node.js', 'Git', 'Docker'],
+    development: ['Backend development', 'Frontend development', 'Database', 'ML', 'Gen AI', 'Computer vision', 'Rendering', 'VFX', 'Game programming'],
+    other: ['Unity', 'Blender', 'Z3', 'Spin', 'LangChain', 'llama-index']
   };
 
   return (

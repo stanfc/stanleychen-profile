@@ -22,13 +22,14 @@
   color: var(--white);
   padding: 5px 15px;
   border-radius: 20px;
-  font-size: 0.9em;
+  font-size: 1.2em;
   display: inline-block;
   margin-bottom: 8px;
 }
 
 .timeline-title {
   font-weight: bold;
+  font-size: 1.1em;
   color: var(--text-primary);
   margin-bottom: 5px;
 }

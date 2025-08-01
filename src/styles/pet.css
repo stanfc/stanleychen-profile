@@ -1,0 +1,76 @@
+/* 寵物容器 */
+.pet-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* 寵物主體 */
+.pet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* 寵物圖片 */
+.pet-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* 寵物點點（保留作為備用） */
+.pet-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* 脈衝動畫 */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* 寵物移動時的動畫 */
+.pet.moving .pet-image {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .pet-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .pet-dot {
+    width: 10px;
+    height: 10px;
+  }
+} 

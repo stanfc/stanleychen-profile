@@ -8,6 +8,7 @@ import Education from './components/Education';
 import WorkExperience from './components/WorkExperience';
 import TechnicalSkills from './components/TechnicalSkills';
 import Experience from './components/Experience';
+import Pet from './components/Pet';
 
 function App() {
   const [currentLang, setCurrentLang] = useState('zh');
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <StarsBackground />
+      <Pet />
       <LanguageToggle 
         currentLang={currentLang} 
         onLanguageChange={handleLanguageChange} 
