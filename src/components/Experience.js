@@ -47,9 +47,7 @@ const Experience = ({ currentLang }) => {
 
 - **初始值對於最終 splatting 的影響**：使用不同數量照片生成的初始值對相通照片及進行 train 並比較最終效果
 - **移動差異過大的 gaussian**：以深度估計為參考，並運用 rendering 的方式找到錯誤的 gaussian 並移動到正確位置
-- **流程設計**：在 tranning 之間插入新的移動步驟減少噪點
-
-這為我未來的研究方向奠定了基礎。`,
+- **流程設計**：在 tranning 之間插入新的移動步驟減少噪點`,
       sideQuest: "ML 自主專題",
       sqContent: `- 使用機器學習分類 YouTube 評論的正負面情緒並轉化為文字雲<br>`,
       sqTooltip: `### **自主專案特色：**
@@ -137,9 +135,7 @@ const Experience = ({ currentLang }) => {
 
 - **Impact of Initial Values on Final Splatting**: Using different numbers of photos to generate initial values, training on the same photos and comparing final results
 - **Moving Gaussians with Large Differences**: Using depth estimation as reference and applying rendering methods to find incorrect Gaussians and move them to correct positions
-- **Process Design**: Inserting new movement steps between training to reduce noise
-
-This laid the foundation for my future research direction.`,
+- **Process Design**: Inserting new movement steps between training to reduce noise`,
       sideQuest: "ML Independent Project",
       sqContent: `- Use machine learning to classify positive/negative YouTube comments and convert them into word clouds<br>`,
       sqTooltip: `### **Independent Project Features:**
