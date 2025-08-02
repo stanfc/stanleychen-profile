@@ -22,14 +22,14 @@
   color: var(--white);
   padding: 5px 15px;
   border-radius: 20px;
-  font-size: 1.2em;
+  font-size: 0.9em;
   display: inline-block;
   margin-bottom: 8px;
 }
 
 .timeline-title {
-  font-weight: bold;
-  font-size: 1.1em;
+  font-weight: 1000;
+  font-size: 1.5em;
   color: var(--text-primary);
   margin-bottom: 5px;
 }
@@ -38,6 +38,7 @@
   color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 8px;
+  font-size: 1.3em;
 }
 
 .timeline-description {
@@ -155,4 +156,43 @@
 .tooltip strong {
   color: var(--primary-color);
   font-weight: bold;
+}
+
+/* 專案連結按鈕樣式 */
+.project-link {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--primary-color);
+}
+
+.link-button:active {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .link-button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
 } 

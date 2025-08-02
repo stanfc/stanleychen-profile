@@ -11,6 +11,9 @@ const Experience = ({ currentLang }) => {
       vfxContent: `- 實作 HDR 演算法<br>
                   - 實作圖像融合演算法<br>
                   - 使用 Blender 製作影片<br>`,
+      vfxGithubLink: "https://github.com/leolinpotato/ntu-vfx-2024",
+      vfxVedioLink1: "https://www.youtube.com/watch?v=e7_iIwEm398",
+      vfxVedioLink2: "https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=KqNNqOy3fpY&list=PLiioR5ew-Zqt6aNmCfPRWQPo7tEjH7dRb&index=16",
       vfxTooltip: `### **我在團隊中的貢獻：**
 
 - **HDR演算法**：實作照片對齊及 Mitsuaga and Nayar's method 演算法
@@ -33,6 +36,7 @@ const Experience = ({ currentLang }) => {
 - **興趣發覺**:我發現自己很享受需要結合創造力的工作`,
       gameProgramming: "遊戲程式設計",
       gpContent: `- 參與 CAGED 遊戲開發<br>`,
+      gpLink: "https://fhvirus.itch.io/caged?fbclid=IwZXh0bgNhZW0CMTAAAR3sYiRt9_hX8UyU68FCerY5O92KcjUp45jFvAippdTQ-LYH3yQsvf7chzQ_aem__vxlOau9PK69ds_E1oiPTQ",
       gpTooltip: `### **我在團隊中的角色：**
 - **品質保證**：專門將遊戲品質不夠好的地方修復
 - **VFX**：製作遊戲特效、聲光效果及劇情動畫
@@ -43,6 +47,7 @@ const Experience = ({ currentLang }) => {
 - **git 使用**：學會如何使用 git 以及 github 在團體中進行版本控制`,
       specialTopicResearch: "專題研究",
       strContent: `- 使用 Diffusion Model 的深度估計來消除 gaussian splatting model 中的噪聲<br>`,
+      strPresentationLink: "https://drive.google.com/file/d/1GHypUYnbrAHdEKABinBZg7Yqi7HFH1dg/view?usp=sharing",
       strTooltip: `### **研究方法：**
 
 - **初始值對於最終 splatting 的影響**：使用不同數量照片生成的初始值對相通照片及進行 train 並比較最終效果
@@ -50,6 +55,7 @@ const Experience = ({ currentLang }) => {
 - **流程設計**：在 tranning 之間插入新的移動步驟減少噪點`,
       sideQuest: "ML 自主專題",
       sqContent: `- 使用機器學習分類 YouTube 評論的正負面情緒並轉化為文字雲<br>`,
+      sqLink: "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool/sentiment-analysis",
       sqTooltip: `### **自主專案特色：**
 
 - **自行訓練**：可以使用自己的資料集跑 script 訓練模型 (適應不同語言)
@@ -60,6 +66,7 @@ const Experience = ({ currentLang }) => {
       calendarWebApp: "行事曆分享與訂閱平台",
       cwaContent: `- 使用 React 開發行事曆分享與訂閱平台<br>
                   - 前端主要負責人<br>`,
+      cwaPresentationLink: "https://drive.google.com/file/d/1UOdeThkxDmk1_2xY83AmGwgHIregeKoH/view?usp=sharing",
       cwaTooltip: `### **我的職責：**
 
 - **前端開發**：使用 React 開發用戶界面
@@ -73,6 +80,7 @@ const Experience = ({ currentLang }) => {
       ragAgent: "RAG Agent 自主專案",
       rcContent: `- LaTeX 助手<br>
                   - 讀取 latex tool book 的 pdf 來回答問題，並寫入 file<br>`,
+      ragLink: "https://github.com/stanfc/agent-project",
       ragTooltip: `### **專案特色：**
 
 - **RAG 能力**：放入兩份 LaTeX 使用手冊，可以找到正確的資訊並用以回答問題
@@ -81,6 +89,7 @@ const Experience = ({ currentLang }) => {
       researchAgent: "Deep Research 自主專案",
       raContent: `- 可以自行搜尋網路的 agent<br>
                   - 精準搜尋使用者需要的資訊<br>`,
+      researchLink: "https://github.com/stanfc/agent-project",
       researchTooltip: `### **專案特色：**
 
 - **自主搜尋**：可以自行搜尋網路的智能代理
@@ -99,6 +108,9 @@ const Experience = ({ currentLang }) => {
       vfxContent: `- Implement HDR algorithm<br>
                   - Implement image fusion algorithm<br>
                   - Use Blender to create videos<br>`,
+      vfxGithubLink: "https://github.com/leolinpotato/ntu-vfx-2024",
+      vfxVedioLink1: "https://www.youtube.com/watch?v=e7_iIwEm398",
+      vfxVedioLink2: "https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=KqNNqOy3fpY&list=PLiioR5ew-Zqt6aNmCfPRWQPo7tEjH7dRb&index=16",
       vfxTooltip: `### **My Contributions:**
 
 - **HDR Algorithm**: Implemented photo alignment and Mitsuaga and Nayar's method algorithm
@@ -121,6 +133,7 @@ const Experience = ({ currentLang }) => {
 - **Interest Discovery**: I discovered that I really enjoy work that requires creativity`,
       gameProgramming: "Game Programming",
       gpContent: `- Participate in CAGED game development<br>`,
+      gpLink: "https://fhvirus.itch.io/caged?fbclid=IwZXh0bgNhZW0CMTAAAR3sYiRt9_hX8UyU68FCerY5O92KcjUp45jFvAippdTQ-LYH3yQsvf7chzQ_aem__vxlOau9PK69ds_E1oiPTQ",
       gpTooltip: `### **My Role in Team:**
 - **Quality Assurance**: Specialized in fixing areas where game quality was insufficient
 - **VFX**: Creating game effects, audio-visual effects, and story animations
@@ -131,6 +144,7 @@ const Experience = ({ currentLang }) => {
 - **Git Usage**: Learned how to use git and GitHub for version control in teams`,
       specialTopicResearch: "Special Topic Research",
       strContent: `- Using Diffusion Model depth estimation to eliminate noise in Gaussian Splatting Models<br>`,
+      strPresentationLink: "https://drive.google.com/file/d/1GHypUYnbrAHdEKABinBZg7Yqi7HFH1dg/view?usp=sharing",
       strTooltip: `### **Research Methods:**
 
 - **Impact of Initial Values on Final Splatting**: Using different numbers of photos to generate initial values, training on the same photos and comparing final results
@@ -138,6 +152,7 @@ const Experience = ({ currentLang }) => {
 - **Process Design**: Inserting new movement steps between training to reduce noise`,
       sideQuest: "ML Independent Project",
       sqContent: `- Use machine learning to classify positive/negative YouTube comments and convert them into word clouds<br>`,
+      sqLink: "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool/sentiment-analysis",
       sqTooltip: `### **Independent Project Features:**
 
 - **Self-training**: Can use own dataset to run scripts and train models (adaptable to different languages)
@@ -148,6 +163,7 @@ const Experience = ({ currentLang }) => {
       calendarWebApp: "Calendar Sharing and Subscription Platform",
       cwaContent: `- Use React to develop a calendar sharing and subscription platform<br>
                   - Frontend main responsible engineer<br>`,
+      cwaPresentationLink: "https://drive.google.com/file/d/1UOdeThkxDmk1_2xY83AmGwgHIregeKoH/view?usp=sharing",
       cwaTooltip: `### **My Responsibilities:**
 
 - **Frontend Development**: Using React to develop user interfaces
@@ -161,6 +177,7 @@ const Experience = ({ currentLang }) => {
       ragAgent: "RAG Agent Independent Project",
       rcContent: `- LaTeX Helper<br>
                   - Read LaTeX tool book PDF to answer questions and write to files<br>`,
+      ragLink: "https://github.com/stanfc/agent-project",
       ragTooltip: `### **Project Features:**
 
 - **RAG Capability**: Can input two LaTeX user manuals and find correct information to answer questions
@@ -169,6 +186,7 @@ const Experience = ({ currentLang }) => {
       researchAgent: "Deep Research Independent Project",
       raContent: `- Agent that can search the web independently<br>
                   - Precisely search for information the user needs<br>`,
+      researchLink: "https://github.com/stanfc/agent-project",
       researchTooltip: `### **Project Features:**
 
 - **Autonomous Search**: Intelligent agent that can search the web independently
@@ -217,6 +235,17 @@ const Experience = ({ currentLang }) => {
           </div>
           <div className="timeline-description">
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].vfxContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].vfxGithubLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '查看專案' : 'View Project'}
+              </a>
+              <a href={content[currentLang].vfxVedioLink1} target="_blank" rel="noopener noreferrer" className="link-button">
+                🎥 {currentLang === 'zh' ? 'Blender 特效製作' : 'Blender VFX'}
+              </a>
+              <a href={content[currentLang].vfxVedioLink2} target="_blank" rel="noopener noreferrer" className="link-button">
+                🎥 {currentLang === 'zh' ? '期末專案' : 'Final Project'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="timeline-item">
@@ -241,6 +270,11 @@ const Experience = ({ currentLang }) => {
           </div>
           <div className="timeline-description">
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].gpContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].gpLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '玩遊戲' : 'Play Game'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="timeline-item">
@@ -253,6 +287,11 @@ const Experience = ({ currentLang }) => {
           </div>
           <div className="timeline-description">
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].sqContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].sqLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '查看專案' : 'View Project'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="timeline-item">
@@ -265,6 +304,11 @@ const Experience = ({ currentLang }) => {
           </div>
           <div className="timeline-description">
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].strContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].strPresentationLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '查看報告' : 'View Report'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="timeline-item">
@@ -277,6 +321,11 @@ const Experience = ({ currentLang }) => {
           </div>
           <div className="timeline-description">
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].rcContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].ragLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '查看專案' : 'View Project'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="timeline-item">
@@ -289,6 +338,11 @@ const Experience = ({ currentLang }) => {
           </div>
           <div className="timeline-description">
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].raContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].researchLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '查看專案' : 'View Project'}
+              </a>
+            </div>
           </div>
         </div>
         <div className="timeline-item">
