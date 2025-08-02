@@ -73,6 +73,39 @@
   transform: scale(1.05);
 }
 
+.github-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.phone-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .contact-info {
     flex-direction: column;

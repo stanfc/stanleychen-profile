@@ -33,11 +33,21 @@ const Header = ({ currentLang }) => {
       <div className="contact-info">
         <div className="contact-item">
           <span>📧</span>
-          <span>bestshaw5@gmail.com</span>
+          <a 
+            href="mailto:bestshaw5@gmail.com" 
+            className="email-link"
+          >
+            bestshaw5@gmail.com
+          </a>
         </div>
         <div className="contact-item">
           <span>📱</span>
-          <span>+886 910-353-302</span>
+          <a 
+            href="tel:+886910353302" 
+            className="phone-link"
+          >
+            +886 910-353-302
+          </a>
         </div>
         <div className="contact-item">
           <span>📍</span>
@@ -45,7 +55,14 @@ const Header = ({ currentLang }) => {
         </div>
         <div className="contact-item">
           <span>🔗</span>
-          <span>github.com/stanfc</span>
+          <a 
+            href="https://github.com/stanfc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            github.com/stanfc
+          </a>
         </div>
       </div>
     </header>

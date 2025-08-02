@@ -29,6 +29,9 @@ const Experience = ({ currentLang }) => {
       researchAgent: "Deep Research",
       raContent: `- 可以自行搜尋網路的 agent<br>
                   - 精準搜尋使用者需要的資訊<br>`,
+      maiagentProductEnhance: "為公司產品 Maiagent 新增功能",
+      maiagentContent: `- 文生圖及圖生圖支援<br>
+                        - 自動化 Agent 回復品質評估與檢測流程<br>`,
     },
     en: {
       title: "EXPERIENCE",
@@ -56,6 +59,10 @@ const Experience = ({ currentLang }) => {
       researchAgent: "Deep Research",
       raContent: `- Can search the web by itself<br>
                   - Precisely search for the information the user needs<br>`,
+      maiagentProductEnhance: "Enhance Maiagent Product",
+      maiagentContent: `- Add text-to-image and image-to-image support<br>
+                        - Automate the quality assessment and detection process of agent responses<br>`,
+
     }
   };
 
@@ -132,6 +139,14 @@ const Experience = ({ currentLang }) => {
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].raContent }} />
           </div>
         </div>
+        <div className="timeline-item">
+          <div className="timeline-date">2025 Spring</div>
+          <div className="timeline-title">{content[currentLang].maiagentProductEnhance}</div>
+          <div className="timeline-description">
+            <div dangerouslySetInnerHTML={{ __html: content[currentLang].maiagentContent }} />
+          </div>
+        </div>
+
       </div>
     </div>
   );
