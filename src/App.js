@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <StarsBackground />
-      <Pet />
+      <Pet currentLang={currentLang} />
       <LanguageToggle 
         currentLang={currentLang} 
         onLanguageChange={handleLanguageChange} 

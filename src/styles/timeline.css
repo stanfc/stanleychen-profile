@@ -60,6 +60,53 @@
   overflow-wrap: break-word;
 }
 
+/* Tooltip 樣式 */
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 125%;
+  left: 0;
+  right: 0;
+  transform: translateX(-50%);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-size: 1em;
+  line-height: 1.5;
+  white-space: nowrap;
+  max-width: 600px;
+  white-space: normal;
+  margin-left: 50px;
+  box-shadow: 0 8px 25px var(--shadow-primary);
+  border: 1px solid var(--border-overlay);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: var(--bg-secondary);
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
 /* 響應式設計 */
 @media (max-width: 768px) {
   .experience-grid {
@@ -73,4 +120,39 @@
     grid-row: auto !important;
     grid-column: auto !important;
   }
+  
+  .tooltip {
+    max-width: 250px;
+    font-size: 0.85em;
+  }
+}
+
+/* Markdown 樣式 */
+.tooltip h1,
+.tooltip h2,
+.tooltip h3,
+.tooltip h4,
+.tooltip h5,
+.tooltip h6 {
+  margin: 0 0 8px 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.tooltip p {
+  margin: 0 0 8px 0;
+}
+
+.tooltip ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.tooltip li {
+  margin: 4px 0;
+}
+
+.tooltip strong {
+  color: var(--primary-color);
+  font-weight: bold;
 } 
