@@ -13,7 +13,7 @@ const Experience = ({ currentLang }) => {
                   - 使用 Blender 製作影片<br>`,
       vfxGithubLink: "https://github.com/leolinpotato/ntu-vfx-2024",
       vfxVedioLink1: "https://www.youtube.com/watch?v=e7_iIwEm398",
-      vfxVedioLink2: "https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=KqNNqOy3fpY&list=PLiioR5ew-Zqt6aNmCfPRWQPo7tEjH7dRb&index=16",
+      vfxVedioLink2: "https://youtu.be/KqNNqOy3fpY?si=4KVSvJS_8_uxlPGE",
       vfxTooltip: `### **我在團隊中的貢獻：**
 
 - **HDR演算法**：實作照片對齊及 Mitsuaga and Nayar's method 演算法
@@ -55,7 +55,7 @@ const Experience = ({ currentLang }) => {
 - **流程設計**：在 tranning 之間插入新的移動步驟減少噪點`,
       sideQuest: "ML 自主專題",
       sqContent: `- 使用機器學習分類 YouTube 評論的正負面情緒並轉化為文字雲<br>`,
-      sqLink: "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool/sentiment-analysis",
+      sqLink: "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool",
       sqTooltip: `### **自主專案特色：**
 
 - **自行訓練**：可以使用自己的資料集跑 script 訓練模型 (適應不同語言)
@@ -110,7 +110,7 @@ const Experience = ({ currentLang }) => {
                   - Use Blender to create videos<br>`,
       vfxGithubLink: "https://github.com/leolinpotato/ntu-vfx-2024",
       vfxVedioLink1: "https://www.youtube.com/watch?v=e7_iIwEm398",
-      vfxVedioLink2: "https://www.youtube.com/watch?v=https://www.youtube.com/watch?v=KqNNqOy3fpY&list=PLiioR5ew-Zqt6aNmCfPRWQPo7tEjH7dRb&index=16",
+      vfxVedioLink2: "https://youtu.be/KqNNqOy3fpY?si=4KVSvJS_8_uxlPGE",
       vfxTooltip: `### **My Contributions:**
 
 - **HDR Algorithm**: Implemented photo alignment and Mitsuaga and Nayar's method algorithm
@@ -152,7 +152,7 @@ const Experience = ({ currentLang }) => {
 - **Process Design**: Inserting new movement steps between training to reduce noise`,
       sideQuest: "ML Independent Project",
       sqContent: `- Use machine learning to classify positive/negative YouTube comments and convert them into word clouds<br>`,
-      sqLink: "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool/sentiment-analysis",
+      sqLink: "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool",
       sqTooltip: `### **Independent Project Features:**
 
 - **Self-training**: Can use own dataset to run scripts and train models (adaptable to different languages)
