@@ -4,11 +4,13 @@ import profileImage from '../assets/profile_image.jpg';
 const Header = ({ currentLang }) => {
   const content = {
     zh: {
-      title: "後端工程師",
+      name: "陳璿修",
+      title: "資訊工程學系學生 | 後端工程師 | 生成式 AI 工程師",
       location: "臺北市，臺灣"
     },
     en: {
-      title: "Backend Engineer", 
+      name: "Shuan-Shaw Chen",
+      title: "Computer Science Student | Backend Engineer | Generative AI Engineer", 
       location: "Taipei, Taiwan"
     }
   };

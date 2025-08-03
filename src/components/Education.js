@@ -6,11 +6,11 @@ const Education = ({ currentLang }) => {
       title: "學歷",
       scienceClass: "科學班",
       nehs: "國立新竹科學園區實驗高級中等學校",
-      csieNytu: "資訊工程學系",
+      csieNycu: "資訊工程學系",
       nycu: "國立陽明交通大學",
       csieNtu: "資訊工程學系",
       ntu: "國立臺灣大學",
-      gpaNctu: "GPA: 4.3 / 4.3",
+      gpaNycu: "GPA: 4.3 / 4.3",
       gpaNtu: "GPA: 4.26 / 4.3"
     },
     en: {
