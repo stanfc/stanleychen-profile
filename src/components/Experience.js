@@ -272,7 +272,7 @@ const Experience = ({ currentLang }) => {
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].gpContent }} />
             <div className="project-link">
               <a href={content[currentLang].gpLink} target="_blank" rel="noopener noreferrer" className="link-button">
-                🔗 {currentLang === 'zh' ? '玩遊戲' : 'Play Game'}
+              🎮 {currentLang === 'zh' ? '玩遊戲' : 'Play Game'}
               </a>
             </div>
           </div>
