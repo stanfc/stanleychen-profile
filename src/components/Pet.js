@@ -11,7 +11,7 @@ const Pet = () => {
     
     if (!pet || !container) return;
 
-    // 寵物速度配置
+    // 寵物速度配置 // s123
     const SPEED = 1.5; // 等速移動的速度 (像素/幀)
     const STOP_DISTANCE = 5; // 停止追蹤的距離
 
