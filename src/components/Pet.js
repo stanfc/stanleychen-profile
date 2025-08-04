@@ -4,7 +4,7 @@ import catGif from '../assets/cat-roll.gif';
 const Pet = ({ currentLang }) => {
   const petRef = useRef(null);
   const containerRef = useRef(null);
-  const [isFollowingCursor, setIsFollowingCursor] = useState(true);
+  const [isFollowingCursor, setIsFollowingCursor] = useState(false);
   const [isAtHome, setIsAtHome] = useState(false);
   
   // 保存貓咪當前位置

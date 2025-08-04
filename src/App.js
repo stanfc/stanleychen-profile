@@ -11,11 +11,11 @@ import Experience from './components/Experience';
 import Pet from './components/Pet';
 
 function App() {
-  const [currentLang, setCurrentLang] = useState('zh');
+  const [currentLang, setCurrentLang] = useState('en');
 
   useEffect(() => {
-    // 從 localStorage 獲取語言設定，預設為中文
-    const savedLang = localStorage.getItem('lang') || 'zh';
+    // 從 localStorage 獲取語言設定，預設為英文
+    const savedLang = localStorage.getItem('lang') || 'en';
     setCurrentLang(savedLang);
     
     // 更新頁面標題
