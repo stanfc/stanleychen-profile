@@ -9,7 +9,7 @@ const Header = ({ currentLang }) => {
       location: "臺北市，臺灣"
     },
     en: {
-      name: "Shuan-Shaw Chen",
+      name: "陳璿修 Shuan-Shaw Chen",
       title: "Computer Science Student | Backend Engineer | Generative AI Engineer", 
       location: "Taipei, Taiwan"
     }
@@ -30,7 +30,7 @@ const Header = ({ currentLang }) => {
           console.log('Image loaded successfully');
         }}
       />
-      <h1 className="name">陳璿修</h1>
+      <h1 className="name">{content[currentLang].name}</h1>
       <p className="title">{content[currentLang].title}</p>
       <div className="contact-info">
         <div className="contact-item">
