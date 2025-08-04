@@ -77,6 +77,15 @@ const Experience = ({ currentLang }) => {
 - **React.js**：學會如何使用 React.js 開發前端
 - **Node.js**：熟悉如何使用 Node.js 開發後端
 - **前後端串接**：學會串接前後端的方法`,
+      renderingProject: "在 pbrt-v4 中添加 l-system 圖形支援",
+      rpContent: `- 在 pbrt-v4 中新增 l-system 支援<br>
+                  - 實作 3d 版本 l-system 圖形生成<br>
+                  - 新增額外功能`,
+      rpLink: "https://github.com/stanfc/pbrt-plus-v4/tree/l-system",
+      rpTooltip: `### **專案特色：**
+
+- **L-System 圖形生成**：實作 L-System 圖形生成演算法
+- **PBRT-v4 擴充**：在 PBRT-v4 中添加 L-System 圖形生成功能`,
       ragAgent: "RAG Agent 自主專案",
       rcContent: `- LaTeX 助手<br>
                   - 讀取 latex tool book 的 pdf 來回答問題，並寫入 file<br>`,
@@ -174,6 +183,15 @@ const Experience = ({ currentLang }) => {
 - **React.js**: Learned how to use React.js for frontend development
 - **Node.js**: Familiar with using Node.js for backend development
 - **Frontend-Backend Integration**: Learned methods to connect frontend and backend`,
+      renderingProject: "L-system support in pbrt-v4",
+      rpContent: `- Add L-system support in pbrt-v4<br>
+                  - Implement 3D version of L-system graphics generation<br>
+                  - Add extra features`,
+      rpLink: "https://github.com/stanfc/pbrt-plus-v4/tree/l-system",
+      rpTooltip: `### **Project Features:**
+
+- **L-System Graphics Generation**: Implement L-System graphics generation algorithm
+- **PBRT-v4 Extension**: Add L-System graphics generation feature in PBRT-v4 so that users can generate complex shapes using L-System syntax`,
       ragAgent: "RAG Agent Independent Project",
       rcContent: `- LaTeX Helper<br>
                   - Read LaTeX tool book PDF to answer questions and write to files<br>`,
@@ -306,7 +324,24 @@ const Experience = ({ currentLang }) => {
             <div dangerouslySetInnerHTML={{ __html: content[currentLang].strContent }} />
             <div className="project-link">
               <a href={content[currentLang].strPresentationLink} target="_blank" rel="noopener noreferrer" className="link-button">
-                🔗 {currentLang === 'zh' ? '查看報告' : 'View Report'}
+              📃 {currentLang === 'zh' ? '查看報告' : 'View Report'}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="timeline-date">2025</div>
+          <div className="timeline-title tooltip-container">
+            {content[currentLang].renderingProject} 💬
+            <div className="tooltip">
+              <ReactMarkdown>{content[currentLang].rpTooltip}</ReactMarkdown>
+            </div>
+          </div>
+          <div className="timeline-description">
+            <div dangerouslySetInnerHTML={{ __html: content[currentLang].rpContent }} />
+            <div className="project-link">
+              <a href={content[currentLang].rpLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                🔗 {currentLang === 'zh' ? '查看專案' : 'View Project'}
               </a>
             </div>
           </div>
