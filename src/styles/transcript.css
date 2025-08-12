@@ -1,0 +1,24 @@
+.transcript-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.transcript-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.transcript-table th,
+.transcript-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transcript-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}

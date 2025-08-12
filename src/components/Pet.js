@@ -48,9 +48,9 @@ const Pet = ({ currentLang }) => {
     let bounds = container.getBoundingClientRect();
     const refreshBounds = () => bounds = container.getBoundingClientRect();
 
-    // 毛線球位置（左上角）
-    const homeX = -bounds.width / 2 + 60; // 距離左邊緣 60px
-    const homeY = -bounds.height / 2 + 60; // 距離上邊緣 60px
+    // 毛線球位置（右下角）
+    const homeX = bounds.width / 2 - 100; // 距離右邊緣 50px
+    const homeY = bounds.height / 2 - 80; // 距離下邊緣 50px
 
     // 寵物位置（初始位置設為毛線球位置）
     let petX = petPositionRef.current.x || homeX;

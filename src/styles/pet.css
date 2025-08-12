@@ -13,8 +13,10 @@
 /* 毛線球 */
 .yarn-ball {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  bottom: 20px; /* Moved to bottom */
+  right: 50px; /* Moved to right */
+  top: unset; /* Unset top */
+  left: unset; /* Unset left */
   display: flex;
   flex-direction: column;
   align-items: center;

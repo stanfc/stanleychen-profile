@@ -22,7 +22,7 @@ const Experience = ({ currentLang }) => {
 
 ### 我學到的事：
 
-- **python 實作優化**：我學會如何讓 python 有效運用資源，尤其在多迴圈時，用多線程、迴圈優化等方式來提升速度`,
+- **python 實作優化：**我學會如何讓 python 有效運用資源，尤其在多迴圈時，用多線程、迴圈優化等方式來提升速度`,
       machineLearning: "機器學習",
       mlContent: `- 實作多種機器學習演算法<br>
                   - 參與 MLB 賽果預測專案 (kaggle 競賽)<br>`,
