@@ -179,6 +179,6 @@
     }
 
     .hamburger.active {
-        transform: translateX(1rem) rotate(1turn); /* move right slightly on mobile when open */
+        transform: translateX(6rem) rotate(1turn); /* move right slightly on mobile when open */
     }
 }
