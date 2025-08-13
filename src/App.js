@@ -6,6 +6,7 @@ import StarsBackground from './components/StarsBackground';
 import Header from './components/Header';
 import Pet from './components/Pet';
 import Profile from './components/Profile';
+import Portfolio from './components/Portfolio';
 import Transcript from './components/Transcript';
 // import Navigation from './components/Navigation'; // Removed old Navigation
 import Drawer from './components/Drawer'; // New Drawer component
@@ -51,6 +52,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Profile currentLang={currentLang} />} />
             <Route path="/transcript" element={<Transcript currentLang={currentLang} />} />
+            <Route path="/portfolio" element={<Portfolio currentLang={currentLang} />} />
           </Routes>
         </div>
       </div>
