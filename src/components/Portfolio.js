@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 // Local, theme-aligned minimal UI using existing site styles
 // No external UI libs; keeps look consistent with cards/buttons already used
 
-const getItems = (lang) => [
+export const getItems = (lang) => [
   {
     id: 'vfx',
     title: lang === 'zh' ? '視覺特效（VFX）' : 'VFX',

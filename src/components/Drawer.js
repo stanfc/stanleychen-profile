@@ -49,6 +49,12 @@ const Drawer = ({ isOpen, onClose, currentLang }) => {
               {currentLang === 'zh' ? '作品集' : 'Portfolio'}
             </NavLink>
           </li>
+          <li className="drawer-nav-item">
+            <NavLink to="/heist" className={({ isActive }) => "drawer-nav-link" + (isActive ? " active" : "")} onClick={onClose}>
+              <span className="drawer-nav-icon"></span>
+              {currentLang === 'zh' ? '畢業大逃殺' : 'Graduation Battle Royale'}
+            </NavLink>
+          </li>
           {/* Add more navigation items as needed */}
         </ul>
       </nav>

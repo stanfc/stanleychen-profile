@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Pet from './components/Pet';
 import Profile from './components/Profile';
 import Portfolio from './components/Portfolio';
+import GalleryHeist from './components/GalleryHeist';
 import Transcript from './components/Transcript';
 // import Navigation from './components/Navigation'; // Removed old Navigation
 import Drawer from './components/Drawer'; // New Drawer component
@@ -53,6 +54,7 @@ function App() {
             <Route path="/" element={<Profile currentLang={currentLang} />} />
             <Route path="/transcript" element={<Transcript currentLang={currentLang} />} />
             <Route path="/portfolio" element={<Portfolio currentLang={currentLang} />} />
+            <Route path="/heist" element={<GalleryHeist currentLang={currentLang} />} />
           </Routes>
         </div>
       </div>
