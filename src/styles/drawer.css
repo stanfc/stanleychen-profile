@@ -1,0 +1,184 @@
+/* 抽屜導覽 */
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 350px;
+    height: 100vh;
+    background: var(--bg-secondary); /* Using variable */
+    backdrop-filter: blur(20px);
+    box-shadow: 4px 0 20px var(--shadow-medium); /* Using variable */
+    z-index: 999;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-right: 1px solid var(--border-overlay); /* Using variable */
+}
+
+.drawer.active {
+    left: 0;
+}
+
+.drawer-header {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--primary-gradient); /* Using variable */
+    color: var(--white); /* Using variable */
+}
+
+.drawer-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.drawer-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.drawer-nav {
+    padding: 1rem 0;
+}
+
+.drawer-nav-item {
+    list-style: none;
+    margin: 0.5rem 1rem;
+}
+
+.drawer-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--text-light); /* Using variable */
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.drawer-nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--hover-bg-strong), transparent);
+    transition: left 0.6s ease;
+}
+
+.drawer-nav-link:hover::before {
+    left: 100%;
+}
+
+.drawer-nav-link:hover,
+.drawer-nav-link.active {
+    background: var(--hover-bg);
+    color: var(--primary-color);
+    transform: translateX(8px);
+}
+
+.drawer-nav-icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    width: 24px;
+    text-align: center;
+}
+
+/* removed duplicate close button */
+
+/* 漢堡按鈕 */
+.hamburger {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-secondary); /* Using variable */
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px var(--shadow-light); /* Using variable */
+    transform: translateX(0) rotate(0turn);
+    transition: transform 1.1s ease-in-out, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* When menu opens (button turns into X), slide right and rotate together */
+.hamburger.active {
+    transform: translateX(15rem) rotate(1turn);
+}
+
+/* inner wrapper to ensure lines rotate with the button smoothly */
+.hamburger .hamburger-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hamburger:hover .hamburger-inner {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.hamburger:hover {
+    background: var(--hover-bg); /* Using variable */
+}
+
+.hamburger-line {
+    width: 20px;
+    height: 2px;
+    background: var(--text-light); /* Using variable */
+    margin: 4px auto;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media (max-width: 768px) {
+    .drawer {
+        width: 280px;
+        left: -280px;
+    }
+    
+    .hamburger {
+        top: 1rem;
+        left: 1.5rem;
+    }
+
+    .hamburger.active {
+        transform: translateX(6rem) rotate(1turn); /* move right slightly on mobile when open */
+    }
+}

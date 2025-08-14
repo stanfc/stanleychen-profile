@@ -4,11 +4,13 @@ import profileImage from '../assets/profile_image.jpg';
 const Header = ({ currentLang }) => {
   const content = {
     zh: {
-      title: "後端工程師",
+      name: "陳璿修",
+      title: "資訊工程學系學生 | 後端工程師 | 生成式 AI 工程師",
       location: "臺北市，臺灣"
     },
     en: {
-      title: "Backend Engineer", 
+      name: "陳璿修 Shuan-Shaw Chen",
+      title: "Computer Science Student | Backend Engineer | Generative AI Engineer", 
       location: "Taipei, Taiwan"
     }
   };
@@ -28,16 +30,26 @@ const Header = ({ currentLang }) => {
           console.log('Image loaded successfully');
         }}
       />
-      <h1 className="name">陳璿修</h1>
+      <h1 className="name">{content[currentLang].name}</h1>
       <p className="title">{content[currentLang].title}</p>
       <div className="contact-info">
         <div className="contact-item">
           <span>📧</span>
-          <span>bestshaw5@gmail.com</span>
+          <a 
+            href="mailto:bestshaw5@gmail.com" 
+            className="email-link"
+          >
+            bestshaw5@gmail.com
+          </a>
         </div>
         <div className="contact-item">
           <span>📱</span>
-          <span>+886 910-353-302</span>
+          <a 
+            href="tel:+886910353302" 
+            className="phone-link"
+          >
+            +886 910-353-302
+          </a>
         </div>
         <div className="contact-item">
           <span>📍</span>
@@ -45,7 +57,14 @@ const Header = ({ currentLang }) => {
         </div>
         <div className="contact-item">
           <span>🔗</span>
-          <span>github.com/stanfc</span>
+          <a 
+            href="https://github.com/stanfc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            github.com/stanfc
+          </a>
         </div>
       </div>
     </header>

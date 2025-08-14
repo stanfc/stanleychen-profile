@@ -1,0 +1,39 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Keep existing margin */
+  margin-top: 1rem; /* Add some top margin for drawer feeling */
+  z-index: 500; /* Ensure it's above other content */
+}
+
+.navigation a {
+  margin: 0 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px var(--shadow-light);
+  border: 1px solid var(--border-overlay);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navigation a:hover {
+  background: var(--hover-bg-strong);
+  color: var(--text-primary); /* Keep text color consistent on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px var(--shadow-medium);
+}
+
+.navigation a.active {
+  background: var(--primary-color); /* Active background color */
+  color: var(--white); /* Active text color */
+  box-shadow: 0 5px 15px var(--shadow-primary); /* Distinct shadow for active state */
+  transform: translateY(-1px); /* Slightly less lift for active */
+}

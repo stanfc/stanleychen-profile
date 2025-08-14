@@ -1,0 +1,73 @@
+.heist-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.heist-canvas-wrap {
+  border: 1px solid var(--border-overlay);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px var(--shadow-light);
+}
+
+.heist-top {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* left 1/4 (mosaic), right 3/4 (rules) */
+  gap: 1rem;
+  align-items: start; /* top-align both columns */
+}
+.heist-mosaic .heist-row strong,
+.heist-rules .heist-row strong {
+  display: inline-block;
+}
+.heist-row {
+  font-size: 1.1rem;
+}
+
+.heist-rules strong {
+  font-size: 1.1rem;
+}
+
+.heist-actions .link-button {
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.heist-controls, .heist-rules {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.heist-row {
+  color: var(--text-secondary);
+}
+
+.heist-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  .heist-wrap {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+}
+
+.heist-mosaic canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border-overlay);
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px var(--shadow-light);
+}
+
+

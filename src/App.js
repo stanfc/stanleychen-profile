@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/index.css';
 import LanguageToggle from './components/LanguageToggle';
 import StarsBackground from './components/StarsBackground';
 import Header from './components/Header';
-import AboutMe from './components/AboutMe';
-import Education from './components/Education';
-import WorkExperience from './components/WorkExperience';
-import TechnicalSkills from './components/TechnicalSkills';
-import Experience from './components/Experience';
 import Pet from './components/Pet';
+import Profile from './components/Profile';
+import Portfolio from './components/Portfolio';
+import GalleryHeist from './components/GalleryHeist';
+import Transcript from './components/Transcript';
+// import Navigation from './components/Navigation'; // Removed old Navigation
+import Drawer from './components/Drawer'; // New Drawer component
+import HamburgerButton from './components/HamburgerButton'; // New HamburgerButton component
 
 function App() {
-  const [currentLang, setCurrentLang] = useState('zh');
+  const [currentLang, setCurrentLang] = useState('en');
+  const [drawerOpen, setDrawerOpen] = useState(false); // State for drawer
 
   useEffect(() => {
-    // 從 localStorage 獲取語言設定，預設為中文
-    const savedLang = localStorage.getItem('lang') || 'zh';
+    const savedLang = localStorage.getItem('lang') || 'en';
     setCurrentLang(savedLang);
-    
-    // 更新頁面標題
     document.title = currentLang === 'zh' ? '陳璿修 - 個人履歷' : 'Stanley Chen - Resume';
   }, [currentLang]);
 
@@ -28,27 +29,36 @@ function App() {
     document.title = lang === 'zh' ? '陳璿修 - 個人履歷' : 'Stanley Chen - Resume';
   };
 
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
-    <div className="App">
-      <StarsBackground />
-      <Pet />
-      <LanguageToggle 
-        currentLang={currentLang} 
-        onLanguageChange={handleLanguageChange} 
-      />
-      
-      <div className="container">
-        <Header currentLang={currentLang} />
+    <Router basename="/stanleychen-profile">
+      <div className="App">
+        <StarsBackground />
+        <Pet currentLang={currentLang} />
+        <LanguageToggle 
+          currentLang={currentLang} 
+          onLanguageChange={handleLanguageChange} 
+        />
         
-        <div className="main-content">
-          <AboutMe currentLang={currentLang} />
-          <TechnicalSkills currentLang={currentLang} />
-          <Education currentLang={currentLang} />
-          <WorkExperience currentLang={currentLang} />
-          <Experience currentLang={currentLang} />
+        <HamburgerButton isOpen={drawerOpen} onClick={toggleDrawer} /> {/* Hamburger button */}
+        <Drawer isOpen={drawerOpen} onClose={toggleDrawer} currentLang={currentLang} /> {/* Drawer component */}
+
+        <div className="container">
+          <Header currentLang={currentLang} />
+          {/* <Navigation currentLang={currentLang} /> */}
+          
+          <Routes>
+            <Route path="/" element={<Profile currentLang={currentLang} />} />
+            <Route path="/transcript" element={<Transcript currentLang={currentLang} />} />
+            <Route path="/portfolio" element={<Portfolio currentLang={currentLang} />} />
+            <Route path="/heist" element={<GalleryHeist currentLang={currentLang} />} />
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

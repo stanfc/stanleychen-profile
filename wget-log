@@ -1,0 +1,11 @@
+--2025-08-12 21:18:39--  https://cursor.blob.core.windows.net/remote-releases/a1fa6fc7d2c2f520293aad84aaa38d091dee6fe0/vscode-reh-linux-x64.tar.gz
+Resolving cursor.blob.core.windows.net (cursor.blob.core.windows.net)... 20.209.35.129
+Connecting to cursor.blob.core.windows.net (cursor.blob.core.windows.net)|20.209.35.129|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 68399219 (65M) [application/x-tar]
+Saving to: ‘/home/stanfc/.cursor-server/bin/a1fa6fc7d2c2f520293aad84aaa38d091dee6fe0-1755004719245655711.tar.gz’
+
+          /h  79%  51.98M  2.61MB/s    eta 7s              /ho  79%  52.12M  2.50MB/s    eta 7s             /hom  81%  52.99M  2.60MB/s    eta 7s            /home  82%  53.54M  2.66MB/s    eta 6s           /home/  83%  54.29M  2.71MB/s    eta 6s          /home/s  84%  54.99M  2.76MB/s    eta 6s         /home/st  85%  55.65M  2.77MB/s    eta 6s        /home/sta  85%  56.01M  2.67MB/s    eta 6s       /home/stan  86%  56.74M  2.72MB/s    eta 4s      /home/stanf  88%  57.45M  2.75MB/s    eta 4s     /home/stanfc  89%  58.16M  2.87MB/s    eta 4s     home/stanfc/  90%  58.80M  2.88MB/s    eta 4s     ome/stanfc/.  91%  59.52M  2.91MB/s    eta 4s     me/stanfc/.c  91%  60.01M  2.77MB/s    eta 3s     e/stanfc/.cu  93%  60.88M  2.85MB/s    eta 3s     /stanfc/.cur  94%  61.66M  2.86MB/s    eta 3s     stanfc/.curs  95%  62.46M  3.00MB/s    eta 3s     tanfc/.curso  96%  63.23M  3.05MB/s    eta 3s     anfc/.cursor  97%  63.91M  3.06MB/s    eta 1s     nfc/.cursor-  98%  64.12M  2.93MB/s    eta 1s     fc/.cursor-s  98%  64.38M  2.71MB/s    eta 1s     c/.cursor-se  99%  65.21M  2.64MB/s    eta 1s     /home/stanfc 100%  65.23M  2.65MB/s    in 31s     
+
+2025-08-12 21:19:11 (2.10 MB/s) - ‘/home/stanfc/.cursor-server/bin/a1fa6fc7d2c2f520293aad84aaa38d091dee6fe0-1755004719245655711.tar.gz’ saved [68399219/68399219]
+
