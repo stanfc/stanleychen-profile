@@ -105,11 +105,13 @@ const Experience = ({ currentLang }) => {
 - **精準檢索**：精準搜尋使用者需要的資訊，不會因模型老舊對於新知識失真`,
       maiagentProductEnhance: "Maiagent 產品增強",
       maiagentContent: `- 文生圖及圖生圖支援<br>
-                        - 自動化 Agent 回復品質評估與檢測流程<br>`,
+                        - 自動化 Agent 回復品質評估與檢測流程<br>
+                        - MaiGPT 共用聊天機器人開發`,
       maiagentTooltip: `### **產品增強：**
 
 - **AI 生成**：文生圖及圖生圖支援
-- **品質控制**：自動化 Agent 回復品質評估，並且可以檢測回復是否符合要求`,
+- **品質控制**：自動化 Agent 回復品質評估，並且可以檢測回復是否符合要求
+- **MaiGPT**：共用聊天機器人，可以讓使用者共用同一個設定的機器人進行聊天 demo`,
     },
     en: {
       title: "EXPERIENCE",
@@ -211,11 +213,13 @@ const Experience = ({ currentLang }) => {
 - **Precise Retrieval**: Precisely search for information the user needs, won't lose accuracy for new knowledge due to outdated models`,
       maiagentProductEnhance: "Maiagent Product Enhancement",
       maiagentContent: `- Add text-to-image and image-to-image support<br>
-                        - Automate agent response quality assessment and detection process<br>`,
+                        - Automate agent response quality assessment and detection process<br>
+                        - MaiGPT shared chatbot development`,
       maiagentTooltip: `### **Product Enhancement:**
 
 - **AI Generation**: Text-to-image and image-to-image support
-- **Quality Control**: Automated agent response quality assessment and can detect if responses meet requirements`,
+- **Quality Control**: Automated agent response quality assessment and can detect if responses meet requirements
+- **MaiGPT**: Shared chatbot, can let users use the same chatbot to chat demo`,
     }
   };
 

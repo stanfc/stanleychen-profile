@@ -10,6 +10,7 @@ const WorkExperience = ({ currentLang }) => {
       description: `- 負責開發 RAG 以及 AI Agent 平台應用，及其他延伸功能開發<br>
                   - 為系統加上 Dataset 題庫管理及測試功能<br>
                   - 為系統加上預設 image generation 功能<br>
+                  - 為系統加上 MaiGPT 預設 chatbot 功能<br>
                   - 解決其他 bug 以及系統優化<br>`
     },
     en: {
@@ -20,6 +21,7 @@ const WorkExperience = ({ currentLang }) => {
       description: `- Responsible for developing RAG and AI Agent platform applications, and other extended function development<br>
                   - Add Dataset management and test function to the system<br>
                   - Add default image generation function to the system<br>
+                  - Add MaiGPT shared chatbot function to the system<br>
                   - Solve other bugs and optimize the system.`
     }
   };
