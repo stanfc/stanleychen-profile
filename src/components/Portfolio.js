@@ -54,7 +54,7 @@ export const getItems = (lang) => [
     thumbnail: `${process.env.PUBLIC_URL}/special_topic.png`,
     tags: ['Research', 'Rendering', 'Team Project'],
     links: {
-      paper: 'https://drive.google.com/file/d/1GHypUYnbrAHdEKABinBZg7Yqi7HFH1dg/view?usp=sharing',
+      paper: 'https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing',
     },
     date: '2025-01-15',
   },
@@ -110,6 +110,19 @@ export const getItems = (lang) => [
     },
     date: '2024-06-15',
   },
+  {
+    id: 'LLM-based-pdf-reader-app',
+    title: lang === 'zh' ? 'IspBirntg 基於 LLM 的 PDF 閱讀器' : 'IspBirntg LLM-based PDF Reader',
+    subtitle: 'React · Django',
+    type: 'web',
+    description: lang === 'zh' ? '本地部屬基於 LLM 的 PDF 閱讀器，支援多模態以及 RAG' : 'Self-hosted LLM-based PDF reader with multi-modal and RAG support',
+    thumbnail: `${process.env.PUBLIC_URL}/ispbirntg.png`,
+    tags: ['React', 'Web', 'Django', 'Side Project', 'LLM', 'RAG'],
+    links: {
+      github: 'https://github.com/stanfc/IspBirntg'
+    },
+    date: '2025-09-15',
+  }
 ];
 
 function useAllTags(items) {

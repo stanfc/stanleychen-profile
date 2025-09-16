@@ -28,13 +28,6 @@ function normalized(x, y) {
   return [x / len, y / len];
 }
 
-function createPatrolGuard(x, y, waypoints) {
-  return {
-    position: { x, y },
-    waypointIndex: 0,
-    waypoints,
-  };
-}
 
 function randRange(min, max) {
   return Math.random() * (max - min) + min;

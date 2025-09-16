@@ -47,7 +47,7 @@ const Experience = ({ currentLang }) => {
 - **git 使用**：學會如何使用 git 以及 github 在團體中進行版本控制`,
       specialTopicResearch: "專題研究",
       strContent: `- 使用 Diffusion Model 的深度估計來消除 gaussian splatting model 中的噪聲<br>`,
-      strPresentationLink: "https://drive.google.com/file/d/1GHypUYnbrAHdEKABinBZg7Yqi7HFH1dg/view?usp=sharing",
+      strPresentationLink: "https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing",
       strTooltip: `### **研究方法：**
 
 - **初始值對於最終 splatting 的影響**：使用不同數量照片生成的初始值對相通照片及進行 train 並比較最終效果
@@ -155,7 +155,7 @@ const Experience = ({ currentLang }) => {
 - **Git Usage**: Learned how to use git and GitHub for version control in teams`,
       specialTopicResearch: "Special Topic Research",
       strContent: `- Using Diffusion Model depth estimation to eliminate noise in Gaussian Splatting Models<br>`,
-      strPresentationLink: "https://drive.google.com/file/d/1GHypUYnbrAHdEKABinBZg7Yqi7HFH1dg/view?usp=sharing",
+      strPresentationLink: "https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing",
       strTooltip: `### **Research Methods:**
 
 - **Impact of Initial Values on Final Splatting**: Using different numbers of photos to generate initial values, training on the same photos and comparing final results
