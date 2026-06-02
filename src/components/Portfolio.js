@@ -1,129 +1,20 @@
 import React, { useMemo, useState } from 'react';
+import { getPortfolioItems } from '../data/portfolio';
 
-// Local, theme-aligned minimal UI using existing site styles
-// No external UI libs; keeps look consistent with cards/buttons already used
-
-export const getItems = (lang) => [
-  {
-    id: 'vfx',
-    title: lang === 'zh' ? '視覺特效（VFX）' : 'VFX',
-    subtitle: lang === 'zh' ? 'Blender · HDR · 圖像融合' : 'Blender · HDR · Image Fusion',
-    type: 'video',
-    description: lang === 'zh' ? '課程作品：實作 HDR、圖像配對與融合，並以 Blender 製作動畫。' : 'Course projects: HDR, matching/fusion, and Blender animations.',
-    thumbnail: `${process.env.PUBLIC_URL}/vfx.png`,
-    tags: ['VFX', 'Blender', 'Python', 'Computer Vision', 'Team Project'],
-    links: {
-      github: 'https://github.com/leolinpotato/ntu-vfx-2024',
-      video: 'https://www.youtube.com/watch?v=e7_iIwEm398',
-      video2: 'https://youtu.be/KqNNqOy3fpY?si=4KVSvJS_8_uxlPGE',
-    },
-    date: '2024-06-01',
-  },
-  {
-    id: 'caged',
-    title: lang === 'zh' ? 'CAGED 遊戲' : 'CAGED Game',
-    subtitle: 'Game · QA · VFX',
-    type: 'web',
-    description: lang === 'zh' ? '參與小組開發，負責品質修復及特效。' : 'Team project; QA and VFX.',
-    thumbnail: `${process.env.PUBLIC_URL}/caged.png`,
-    tags: ['Game', 'VFX', 'C#', 'Unity', 'Team Project'],
-    links: {
-      demo: 'https://fhvirus.itch.io/caged?fbclid=IwZXh0bgNhZW0CMTAAAR3sYiRt9_hX8UyU68FCerY5O92KcjUp45jFvAippdTQ-LYH3yQsvf7chzQ_aem__vxlOau9PK69ds_E1oiPTQ',
-    },
-    date: '2024-10-01',
-  },
-  {
-    id: 'yt-emotion',
-    title: lang === 'zh' ? 'YouTube 評論情緒分析' : 'YouTube Comment Emotion Tool',
-    subtitle: 'ML · Python',
-    type: 'github',
-    description: lang === 'zh' ? '文字雲與模型訓練腳本，支援自訂語料。' : 'Word cloud and training scripts; custom datasets supported.',
-    thumbnail: `${process.env.PUBLIC_URL}/side_project.png`,
-    tags: ['ML', 'NLP', 'Python', 'Personal Project'],
-    links: {
-      github: 'https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool',
-    },
-    date: '2024-09-01',
-  },
-  {
-    id: 'special-topic',
-    title: lang === 'zh' ? '專題研究：使用深度預測改善 Gaussian Splatting' : 'Special Topic: Gaussian Splatting with Depth Prediction',
-    subtitle: 'Research · 3D',
-    type: 'paper',
-    description: lang === 'zh' ? '以深度估計降低 splatting 噪點，包含方法與結果報告。' : 'Reduce splatting noise using depth estimation; report included.',
-    thumbnail: `${process.env.PUBLIC_URL}/special_topic.png`,
-    tags: ['Research', 'Rendering', 'Team Project'],
-    links: {
-      paper: 'https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing',
-    },
-    date: '2025-01-15',
-  },
-  {
-    id: 'pbrt-lsystem',
-    title: lang === 'zh' ? 'PBRT-v4 L-System 支援' : 'L-System Support in PBRT-v4',
-    subtitle: 'Rendering · C++',
-    type: 'github',
-    description: lang === 'zh' ? '在 PBRT-v4 中新增 L-System 支援與 3D 圖形生成。' : 'Added L-System graphics generation to PBRT-v4.',
-    thumbnail: `${process.env.PUBLIC_URL}/rendering.png`,
-    tags: ['Rendering', 'C++', 'PBRT', 'Personal Project'],
-    links: {
-      github: 'https://github.com/stanfc/pbrt-plus-v4/tree/l-system',
-    },
-    date: '2025-05-10',
-  },
-  {
-    id: 'rag-agent',
-    title: lang === 'zh' ? 'RAG Agent' : 'RAG Agent',
-    subtitle: 'Python · LLM',
-    type: 'github',
-    description: lang === 'zh' ? 'LaTeX 助手：讀取 PDF、RAG 問答、工具寫檔。' : 'LaTeX helper: PDF ingest, RAG QA, file writing.',
-    thumbnail: `${process.env.PUBLIC_URL}/rag.png`,
-    tags: ['RAG', 'Python', 'Agent', 'LLM', 'Personal Project'],
-    links: {
-      github: 'https://github.com/stanfc/agent-project',
-    },
-    date: '2025-04-10',
-  },
-  {
-    id: 'research-agent',
-    title: lang === 'zh' ? 'Deep Research Agent' : 'Deep Research Agent',
-    subtitle: 'Web · Agent',
-    type: 'github',
-    description: lang === 'zh' ? '可自動搜尋網路，精準檢索所需資訊。' : 'Autonomous web search; precise retrieval.',
-    thumbnail: `${process.env.PUBLIC_URL}/deep_research.png`,
-    tags: ['Agent', 'Search', 'LLM', 'Personal Project'],
-    links: {
-      github: 'https://github.com/stanfc/agent-project',
-    },
-    date: '2025-04-20',
-  },
-  {
-    id: 'calendar-app',
-    title: lang === 'zh' ? '行事曆分享與訂閱平台' : 'Calendar Sharing & Subscription',
-    subtitle: 'React · Node.js',
-    type: 'web',
-    description: lang === 'zh' ? '前端主要負責；分享與訂閱。' : 'Frontend lead; sharing & subscription.',
-    thumbnail: `${process.env.PUBLIC_URL}/calendar.png`,
-    tags: ['React', 'Web', 'Node.js', 'Team Project'],
-    links: {
-      paper: 'https://drive.google.com/file/d/1UOdeThkxDmk1_2xY83AmGwgHIregeKoH/view?usp=sharing',
-    },
-    date: '2024-06-15',
-  },
-  {
-    id: 'LLM-based-pdf-reader-app',
-    title: lang === 'zh' ? 'IspBirntg 基於 LLM 的 PDF 閱讀器' : 'IspBirntg LLM-based PDF Reader',
-    subtitle: 'React · Django',
-    type: 'web',
-    description: lang === 'zh' ? '本地部屬基於 LLM 的 PDF 閱讀器，支援多模態以及 RAG' : 'Self-hosted LLM-based PDF reader with multi-modal and RAG support',
-    thumbnail: `${process.env.PUBLIC_URL}/ispbirntg.png`,
-    tags: ['React', 'Web', 'Django', 'Side Project', 'LLM', 'RAG'],
-    links: {
-      github: 'https://github.com/stanfc/IspBirntg'
-    },
-    date: '2025-09-15',
-  }
-];
+export const getItems = (lang) => {
+  const raw = getPortfolioItems();
+  return raw.map((item) => ({
+    ...item,
+    title: typeof item.title === 'object' ? item.title[lang] : item.title,
+    subtitle: typeof item.subtitle === 'object' ? item.subtitle[lang] : item.subtitle,
+    description: typeof item.description === 'object' ? item.description[lang] : item.description,
+    thumbnail: item.thumbnail
+      ? item.thumbnail.startsWith('http') || item.thumbnail.startsWith('/')
+        ? item.thumbnail
+        : `${process.env.PUBLIC_URL}/${item.thumbnail}`
+      : '',
+  }));
+};
 
 function useAllTags(items) {
   return useMemo(() => {

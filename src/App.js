@@ -9,9 +9,12 @@ import Profile from './components/Profile';
 import Portfolio from './components/Portfolio';
 import GalleryHeist from './components/GalleryHeist';
 import Transcript from './components/Transcript';
-// import Navigation from './components/Navigation'; // Removed old Navigation
-import Drawer from './components/Drawer'; // New Drawer component
-import HamburgerButton from './components/HamburgerButton'; // New HamburgerButton component
+import Drawer from './components/Drawer';
+import HamburgerButton from './components/HamburgerButton';
+
+const AdminPage = process.env.NODE_ENV === 'development'
+  ? require('./components/AdminPage').default
+  : null;
 
 function App() {
   const [currentLang, setCurrentLang] = useState('en');
@@ -55,6 +58,7 @@ function App() {
             <Route path="/transcript" element={<Transcript currentLang={currentLang} />} />
             <Route path="/portfolio" element={<Portfolio currentLang={currentLang} />} />
             <Route path="/heist" element={<GalleryHeist currentLang={currentLang} />} />
+            {AdminPage && <Route path="/admin" element={<AdminPage />} />}
           </Routes>
         </div>
       </div>

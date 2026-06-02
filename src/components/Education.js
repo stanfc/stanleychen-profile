@@ -1,56 +1,26 @@
 import React from 'react';
+import { getEducationData } from '../data/education';
 
 const Education = ({ currentLang }) => {
-  const content = {
-    zh: {
-      title: "學歷",
-      scienceClass: "科學班",
-      nehs: "國立新竹科學園區實驗高級中等學校",
-      csieNycu: "資訊工程學系",
-      nycu: "國立陽明交通大學",
-      csieNtu: "資訊工程學系",
-      ntu: "國立臺灣大學",
-      gpaNycu: "GPA: 4.3 / 4.3",
-      gpaNtu: "GPA: 4.26 / 4.3"
-    },
-    en: {
-      title: "Education",
-      scienceClass: "Science Class",
-      nehs: "National Experimental High School",
-      csieNycu: "Department of Computer Science",
-      nycu: "National Yang Ming Chiao Tung University",
-      csieNtu: "Department of Computer Science and Information Engineering",
-      ntu: "National Taiwan University",
-      gpaNycu: "GPA: 4.3 / 4.3",
-      gpaNtu: "GPA: 4.26 / 4.3"
-    }
-  };
+  const data = getEducationData();
+  const content = data[currentLang];
 
   return (
     <div className="card">
       <h2>
         <div className="section-icon">🎓</div>
-        <span>{content[currentLang].title}</span>
+        <span>{content.title}</span>
       </h2>
-      <div className="timeline-item">
-        <div className="timeline-date">2019-2022</div>
-        <div className="timeline-title">{content[currentLang].nehs}</div>
-        <div className="timeline-company">{content[currentLang].scienceClass}</div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-date">2022-2023</div>
-        <div className="timeline-title">{content[currentLang].nycu}</div>
-        <div className="timeline-company">{content[currentLang].csieNycu}</div>
-        <div className="timeline-description">{content[currentLang].gpaNycu}</div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-date">2023-2026</div>
-        <div className="timeline-title">{content[currentLang].ntu}</div>
-        <div className="timeline-company">{content[currentLang].csieNtu}</div>
-        <div className="timeline-description">{content[currentLang].gpaNtu}</div>
-      </div>
+      {content.items.map((item, idx) => (
+        <div key={idx} className="timeline-item">
+          <div className="timeline-date">{item.date}</div>
+          <div className="timeline-title">{item.school}</div>
+          <div className="timeline-company">{item.department}</div>
+          {item.gpa && <div className="timeline-description">{item.gpa}</div>}
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Education; 
+export default Education;
