@@ -1,0 +1,1068 @@
+{
+  "admin_aboutMe": {
+    "zh": {
+      "title": "關於我",
+      "text": "我是陳璿修，就讀國立臺灣大學資訊工程學系，目前在 CV 實驗室從事電腦視覺與生成式 AI 相關研究，聚焦於模型在真實場景下的泛化與適應能力。\n<br><br>\n在學術背景上，我修習過深度學習、多模態人工智慧、生成式 AI 安全與機器學習等課程，並具備 Rendering 與 VFX 的跨域知識，對視覺生成任務有較完整的理解。技術上熟悉 Python、C/C++、PyTorch，以及 Git 版本控制與 Unity 開發環境。\n<br><br>\n我曾於思邁智能擔任實習生，負責產品新功能開發與細節優化，具備將研究成果落地的實務經驗。\n<br><br>\n個性上我樂於與人交流想法，喜歡在討論中碰撞出新的思路，在研究之外也保持對新事物的好奇心，習慣主動學習並快速將想法付諸實踐。"
+    },
+    "en": {
+      "title": "About Me",
+      "text": "I am Shuan-Shaw Chen, currently pursuing a degree in Computer Science and Information Engineering at National Taiwan University. I am conducting research in a computer vision lab, focusing on generative AI and the generalization and adaptation of models in real-world scenarios.\n<br><br>\nMy academic background includes courses in deep learning, multimodal AI, generative AI safety, and machine learning. I also have cross-domain knowledge in rendering and VFX, giving me a well-rounded understanding of visual generation tasks. On the technical side, I am proficient in Python, C/C++, and PyTorch, with experience in Git version control and Unity development.\n<br><br>\nI previously interned at MaiAgent, where I worked on developing new product features and refining existing functionality, gaining hands-on experience in bringing research ideas into practical applications.\n<br><br>\nAs for my personality, I enjoy exchanging ideas with others and thrive when new perspectives emerge through discussion. Beyond research, I maintain a strong curiosity for new things, and I am in the habit of learning proactively and turning ideas into practice quickly."
+    }
+  },
+  "admin_experience": {
+    "zh": {
+      "title": "經驗",
+      "items": [
+        {
+          "date": "2024 Spring",
+          "title": "視覺特效",
+          "content": "- 實作 HDR 演算法<br>\n                  - 實作圖像融合演算法<br>\n                  - 使用 Blender 製作影片<br>",
+          "tooltip": "### **我在團隊中的貢獻：**\n\n- **HDR演算法**：實作照片對齊及 Mitsuaga and Nayar's method 演算法\n- **圖像融合**：實作圓柱投影與圖像配對與融合演算法\n- **Blender**：3d 動畫製作\n\n### 我學到的事：\n\n- **python 實作優化：**我學會如何讓 python 有效運用資源，尤其在多迴圈時，用多線程、迴圈優化等方式來提升速度",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/leolinpotato/ntu-vfx-2024"
+            },
+            {
+              "label": "🎥 Blender 特效製作",
+              "url": "https://www.youtube.com/watch?v=e7_iIwEm398"
+            },
+            {
+              "label": "🎥 期末專案",
+              "url": "https://youtu.be/KqNNqOy3fpY?si=4KVSvJS_8_uxlPGE"
+            }
+          ]
+        },
+        {
+          "date": "2024 Fall",
+          "title": "機器學習",
+          "content": "- 實作多種機器學習演算法<br>\n                  - 參與 MLB 賽果預測專案 (kaggle 競賽)<br>",
+          "tooltip": "### **我在團隊中的貢獻：**\n\n- **Kaggle 競賽**：嘗試 CATboost 模型以及 Random Forest 模型\n\n### 我學到的事：\n\n- **創意發想**：機器學習專案需要結合自己的創意和知識，往往會有意想不到的效果\n- **興趣發覺**:我發現自己很享受需要結合創造力的工作",
+          "links": []
+        },
+        {
+          "date": "2024 Fall",
+          "title": "遊戲程式設計",
+          "content": "- 參與 CAGED 遊戲開發<br>",
+          "tooltip": "### **我在團隊中的角色：**\n- **品質保證**：專門將遊戲品質不夠好的地方修復\n- **VFX**：製作遊戲特效、聲光效果及劇情動畫\n\n### 我學到的事：\n\n- **團隊合作**：首次在小團體中工作，學到如何有效分工以及正確的開發流程\n- **git 使用**：學會如何使用 git 以及 github 在團體中進行版本控制",
+          "links": [
+            {
+              "label": "🎮 玩遊戲",
+              "url": "https://fhvirus.itch.io/caged?fbclid=IwZXh0bgNhZW0CMTAAAR3sYiRt9_hX8UyU68FCerY5O92KcjUp45jFvAippdTQ-LYH3yQsvf7chzQ_aem__vxlOau9PK69ds_E1oiPTQ"
+            }
+          ]
+        },
+        {
+          "date": "2024",
+          "title": "ML 自主專題",
+          "content": "- 使用機器學習分類 YouTube 評論的正負面情緒並轉化為文字雲<br>",
+          "tooltip": "### **自主專案特色：**\n\n- **自行訓練**：可以使用自己的資料集跑 script 訓練模型 (適應不同語言)\n- **簡易使用**：輸入 youtube 的 url 就可以生成正負面文字雲\n\n### **我學到的事：**\n- **獨立創作**：培養獨立學習新知及解決問題的能力",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool"
+            }
+          ]
+        },
+        {
+          "date": "2024 - 2025",
+          "title": "專題研究",
+          "content": "- 使用 Diffusion Model 的深度估計來消除 gaussian splatting model 中的噪聲<br>",
+          "tooltip": "### **研究方法：**\n\n- **初始值對於最終 splatting 的影響**：使用不同數量照片生成的初始值對相通照片及進行 train 並比較最終效果\n- **移動差異過大的 gaussian**：以深度估計為參考，並運用 rendering 的方式找到錯誤的 gaussian 並移動到正確位置\n- **流程設計**：在 tranning 之間插入新的移動步驟減少噪點",
+          "links": [
+            {
+              "label": "📃 查看報告",
+              "url": "https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing"
+            }
+          ]
+        },
+        {
+          "date": "2025",
+          "title": "在 pbrt-v4 中添加 l-system 圖形支援",
+          "content": "- 在 pbrt-v4 中新增 l-system 支援<br>\n                  - 實作 3d 版本 l-system 圖形生成<br>\n                  - 新增額外功能",
+          "tooltip": "### **專案特色：**\n\n- **L-System 圖形生成**：實作 L-System 圖形生成演算法\n- **PBRT-v4 擴充**：在 PBRT-v4 中添加 L-System 圖形生成功能",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/stanfc/pbrt-plus-v4/tree/l-system"
+            }
+          ]
+        },
+        {
+          "date": "2025 Spring",
+          "title": "RAG Agent 自主專案",
+          "content": "- LaTeX 助手<br>\n                  - 讀取 latex tool book 的 pdf 來回答問題，並寫入 file<br>",
+          "tooltip": "### **專案特色：**\n\n- **RAG 能力**：放入兩份 LaTeX 使用手冊，可以找到正確的資訊並用以回答問題\n- **LLM 串接**：給予正確提示詞使其正確回答問題\n- **工具串接**：讓 Agent 可以將回應的語法寫入 .tex 檔",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/stanfc/agent-project"
+            }
+          ]
+        },
+        {
+          "date": "2025 Spring",
+          "title": "Deep Research 自主專案",
+          "content": "- 可以自行搜尋網路的 agent<br>\n                  - 精準搜尋使用者需要的資訊<br>",
+          "tooltip": "### **專案特色：**\n\n- **自主搜尋**：可以自行搜尋網路的智能代理\n- **精準檢索**：精準搜尋使用者需要的資訊，不會因模型老舊對於新知識失真",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/stanfc/agent-project"
+            }
+          ]
+        },
+        {
+          "date": "2025 Fall",
+          "title": "ADL 期末：LLM Jailbreak 攻擊（DPO）",
+          "content": "- 以 DPO 訓練 LLM Rewriter，透過 safety guard 與 usefulness judge 作為 reward signal<br>\n                  - 使模型學會改寫 prompt 以繞過 LLM 安全過濾器<br>",
+          "tooltip": "### **我的貢獻：**\n\n- **run_inference_progress.py**：實作帶 tqdm 進度條的 inference 腳本，支援中斷續跑（resume）\n- **run_eval_progress.py**：實作帶即時 Safety/Relevance/Acc 顯示的 evaluation 腳本，支援 resume 與 weighted score 計算\n\n### **我學到的事：**\n- **實驗工程**：如何設計可中斷、可復原的大規模 LLM 評估流程\n- **指標設計**：cost-weighted accuracy 的計算與意義",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/joshuachen0213/ADL-Final"
+            }
+          ]
+        },
+        {
+          "date": "2026.3",
+          "title": "GuardCircle 家人防詐守護系統",
+          "content": "- 多模態內容偵測：文字、網址、電話、圖片、檔案<br>\n                  - 家庭圈邀請、事件總覽與通知<br>\n                  - AI 風險評估與可解釋原因<br>",
+          "tooltip": "### **我的貢獻：**\n\n- **多媒體偵測（Go）**：開發 analysis service，整合 AWS Bedrock 進行多媒體內容偵測\n- **S3 Presigned URL**：實作 user-event 與 families-scan-event 兩個 Lambda 服務的 S3 presigned URL 回傳，讓前端可直接存取檔案\n- **Terraform 部署**：調整 Lambda 相關 infra 設定\n\n### **我學到的事：**\n- **Go 後端**：Lambda function 開發與 AWS SDK 使用\n- **無伺服器架構**：Terraform 管理 AWS 資源的實務經驗",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/yenyu3/guardcircle-app"
+            }
+          ]
+        },
+        {
+          "date": "2026",
+          "title": "金曲猜歌王",
+          "content": "- 基於 Hitster 桌遊規則的本地多人猜歌遊戲<br>\n                  - 支援 2-8 人、代幣系統、卡牌時間線排序<br>\n                  - 挑戰機制與即時遊戲狀態管理<br>",
+          "tooltip": "### **我的貢獻：**\n\n- **專案建立**：初始化整個專案架構（Vue.js 前端 + Express.js 後端）\n- **遊戲規則實作**：持續新增規則、修復 bug、擴充音樂曲庫\n\n### **我學到的事：**\n- **Vue.js + Pinia**：學會 Vue 3 Composition API 與狀態管理\n- **遊戲系統設計**：複雜規則的狀態機設計與實作",
+          "links": [
+            {
+              "label": "🔗 查看專案",
+              "url": "https://github.com/stanfc/listen-up"
+            }
+          ]
+        },
+        {
+          "date": "2025.6 - 2026.6",
+          "title": "Maiagent 生成式AI工程師實習",
+          "content": "- Agent 工具鏈開發：browser tool、code interpreter、grep/glob/read/write、RAG 工具等<br>\n                  - RAG / Text-to-SQL：Database 模組獨立重構、多資料庫支援、Agentic Text-to-SQL<br>\n                  - DeepEval 評估系統整合：自動化測試資料生成與 Agent 回覆品質評估<br>\n                  - MaiGPT 共用聊天機器人平台開發<br>\n                  - Agent Teams 多 agent 協作架構（圖結構）<br>",
+          "tooltip": "### **主要貢獻：**\n\n- **Agent 核心能力**：開發 Agent Teams 多 agent 協作（Team/TeamNode/TeamEdge 圖結構）、Agent Skills 系統、Code Interpreter、Browser Tool\n- **Tool 系統**：實作 grep / glob / read / write（含 streaming）/ get-from-kb / query_files / retrieve_text_nodes / text-to-image 等工具，並支援 MCP 自訂 header\n- **RAG / Text-to-SQL**：將 Database 模組從 chatbot 獨立（最大規模重構，+6866/-424）、支援多資料庫連線、開發 Agentic Text-to-SQL 服務、Agent metadata 選取與重構\n- **DeepEval 評估系統**：整合 DeepEval 評估框架、API 調整、synthesizer 自動生成測試資料\n- **MaiGPT 平台**：MaiGPT chatbot 功能、RAG tool 支援、批次更新組織設定的管理指令\n- **基礎建設**：health check API（/health/dependencies）、CNAME socket event 即時推播、completions view async serializer 效能優化\n\n### **我學到的事：**\n- **大型系統設計**：如何在既有複雜系統中做大規模模組解耦與重構\n- **Agent 架構**：tool use、multi-agent 協作、streaming 等 LLM agent 核心技術的實務開發\n- **工程品質**：pre-commit hook、async 效能優化、評估系統建立等工程最佳實踐",
+          "links": []
+        }
+      ]
+    },
+    "en": {
+      "title": "EXPERIENCE",
+      "items": [
+        {
+          "date": "2024 Spring",
+          "title": "VFX",
+          "content": "- Implement HDR algorithm<br>\n                  - Implement image fusion algorithm<br>\n                  - Use Blender to create videos<br>",
+          "tooltip": "### **My Contributions:**\n\n- **HDR Algorithm**: Implemented photo alignment and Mitsuaga and Nayar's method algorithm\n- **Image Fusion**: Implemented cylindrical projection and image matching and fusion algorithms\n- **Blender**: 3D animation production\n\n### What Have I Learned:\n\n- **Python Implementation Optimization**: I learned how to make Python efficiently use resources, especially in multiple loops, using multi-threading, loop optimization, and other methods to improve speed",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/leolinpotato/ntu-vfx-2024"
+            },
+            {
+              "label": "🎥 Blender VFX",
+              "url": "https://www.youtube.com/watch?v=e7_iIwEm398"
+            },
+            {
+              "label": "🎥 Final Project",
+              "url": "https://youtu.be/KqNNqOy3fpY?si=4KVSvJS_8_uxlPGE"
+            }
+          ]
+        },
+        {
+          "date": "2024 Fall",
+          "title": "Machine Learning",
+          "content": "- Implement multiple machine learning algorithms<br>\n                  - Participate in MLB result forecasting project (Kaggle competition)<br>",
+          "tooltip": "### **My Contributions:**\n\n- **Kaggle Competition**: Tried CATboost and Random Forest models\n\n### What Have I Learned:\n\n- **Creative Thinking**: Machine learning projects require combining your own creativity and knowledge, often leading to unexpected results\n- **Interest Discovery**: I discovered that I really enjoy work that requires creativity",
+          "links": []
+        },
+        {
+          "date": "2024 Fall",
+          "title": "Game Programming",
+          "content": "- Participate in CAGED game development<br>",
+          "tooltip": "### **My Role in Team:**\n- **Quality Assurance**: Specialized in fixing areas where game quality was insufficient\n- **VFX**: Creating game effects, audio-visual effects, and story animations\n\n### What Have I Learned:\n\n- **Team Collaboration**: First time working in a small group, learned how to effectively divide work and proper development processes\n- **Git Usage**: Learned how to use git and GitHub for version control in teams",
+          "links": [
+            {
+              "label": "🎮 Play Game",
+              "url": "https://fhvirus.itch.io/caged?fbclid=IwZXh0bgNhZW0CMTAAAR3sYiRt9_hX8UyU68FCerY5O92KcjUp45jFvAippdTQ-LYH3yQsvf7chzQ_aem__vxlOau9PK69ds_E1oiPTQ"
+            }
+          ]
+        },
+        {
+          "date": "2024",
+          "title": "ML Independent Project",
+          "content": "- Use machine learning to classify positive/negative YouTube comments and convert them into word clouds<br>",
+          "tooltip": "### **Independent Project Features:**\n\n- **Self-training**: Can use own dataset to run scripts and train models (adaptable to different languages)\n- **Easy to Use**: Input YouTube URL to generate positive/negative word clouds\n\n### **What Have I Learned:**\n- **Independent Creation**: Cultivated ability to independently learn new knowledge and solve problems",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool"
+            }
+          ]
+        },
+        {
+          "date": "2024 - 2025",
+          "title": "Special Topic Research",
+          "content": "- Using Diffusion Model depth estimation to eliminate noise in Gaussian Splatting Models<br>",
+          "tooltip": "### **Research Methods:**\n\n- **Impact of Initial Values on Final Splatting**: Using different numbers of photos to generate initial values, training on the same photos and comparing final results\n- **Moving Gaussians with Large Differences**: Using depth estimation as reference and applying rendering methods to find incorrect Gaussians and move them to correct positions\n- **Process Design**: Inserting new movement steps between training to reduce noise",
+          "links": [
+            {
+              "label": "📃 View Report",
+              "url": "https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing"
+            }
+          ]
+        },
+        {
+          "date": "2025",
+          "title": "L-system support in pbrt-v4",
+          "content": "- Add L-system support in pbrt-v4<br>\n                  - Implement 3D version of L-system graphics generation<br>\n                  - Add extra features",
+          "tooltip": "### **Project Features:**\n\n- **L-System Graphics Generation**: Implement L-System graphics generation algorithm\n- **PBRT-v4 Extension**: Add L-System graphics generation feature in PBRT-v4 so that users can generate complex shapes using L-System syntax",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/stanfc/pbrt-plus-v4/tree/l-system"
+            }
+          ]
+        },
+        {
+          "date": "2025 Spring",
+          "title": "RAG Agent Independent Project",
+          "content": "- LaTeX Helper<br>\n                  - Read LaTeX tool book PDF to answer questions and write to files<br>",
+          "tooltip": "### **Project Features:**\n\n- **RAG Capability**: Can input two LaTeX user manuals and find correct information to answer questions\n- **LLM Integration**: Provide correct prompts to ensure accurate question answering\n- **Tool Integration**: Allow Agent to write response syntax to .tex files",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/stanfc/agent-project"
+            }
+          ]
+        },
+        {
+          "date": "2025 Spring",
+          "title": "Deep Research Independent Project",
+          "content": "- Agent that can search the web independently<br>\n                  - Precisely search for information the user needs<br>",
+          "tooltip": "### **Project Features:**\n\n- **Autonomous Search**: Intelligent agent that can search the web independently\n- **Precise Retrieval**: Precisely search for information the user needs, won't lose accuracy for new knowledge due to outdated models",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/stanfc/agent-project"
+            }
+          ]
+        },
+        {
+          "date": "2025 Fall",
+          "title": "ADL Final: LLM Jailbreak Attack via DPO",
+          "content": "- Trained LLM rewriter via DPO using safety guard and usefulness judge as reward signals<br>\n                  - Model learns to rewrite prompts to bypass LLM safety filters<br>",
+          "tooltip": "### **My Contributions:**\n\n- **run_inference_progress.py**: Built inference script with tqdm progress bar and resume-from-interrupt support\n- **run_eval_progress.py**: Built evaluation script with real-time Safety/Relevance/Acc display, resume support, and cost-weighted score calculation\n\n### **What Have I Learned:**\n- **Experiment Engineering**: Designing large-scale LLM evaluation pipelines that are interruptible and resumable\n- **Metric Design**: Cost-weighted accuracy calculation and its practical significance",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/joshuachen0213/ADL-Final"
+            }
+          ]
+        },
+        {
+          "date": "2026.3",
+          "title": "GuardCircle — Family Anti-Scam App",
+          "content": "- Multi-modal scam detection: text, URL, phone, image, file<br>\n                  - Family circle invitation, event overview and notifications<br>\n                  - AI-powered risk assessment with explainable reasons<br>",
+          "tooltip": "### **My Contributions:**\n\n- **Multi-media Detection (Go)**: Developed analysis service integrating AWS Bedrock for multi-media content detection\n- **S3 Presigned URL**: Implemented presigned URL responses in user-event and families-scan-event Lambda services for direct frontend file access\n- **Terraform Infra**: Adjusted Lambda-related infrastructure configuration\n\n### **What Have I Learned:**\n- **Go Backend**: Lambda function development and AWS SDK usage\n- **Serverless Architecture**: Hands-on experience managing AWS resources with Terraform",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/yenyu3/guardcircle-app"
+            }
+          ]
+        },
+        {
+          "date": "2026",
+          "title": "Listen Up — Music Guessing Game",
+          "content": "- Local multiplayer music guessing game based on Hitster rules<br>\n                  - Supports 2-8 players, token system, timeline card placement<br>\n                  - Challenge mechanics and real-time game state management<br>",
+          "tooltip": "### **My Contributions:**\n\n- **Project Setup**: Initialized the entire project architecture (Vue.js frontend + Express.js backend)\n- **Game Logic**: Continuously added rules, fixed bugs, and expanded the music library\n\n### **What Have I Learned:**\n- **Vue.js + Pinia**: Vue 3 Composition API and state management\n- **Game System Design**: State machine design for complex rule sets",
+          "links": [
+            {
+              "label": "🔗 View Project",
+              "url": "https://github.com/stanfc/listen-up"
+            }
+          ]
+        },
+        {
+          "date": "2025.6 - 2026.6",
+          "title": "Maiagent Generative AI Engineer Intern",
+          "content": "- Agent toolchain: browser tool, code interpreter, grep/glob/read/write, RAG tools, and more<br>\n                  - RAG / Text-to-SQL: database module refactor, multi-DB support, agentic text-to-SQL<br>\n                  - DeepEval integration: automated test data synthesis and agent response quality evaluation<br>\n                  - MaiGPT shared chatbot platform development<br>\n                  - Agent Teams multi-agent collaboration architecture (graph structure)<br>",
+          "tooltip": "### **Key Contributions:**\n\n- **Agent Core**: Built Agent Teams multi-agent collaboration (Team/TeamNode/TeamEdge graph), Agent Skills system, Code Interpreter, Browser Tool\n- **Tool System**: Implemented grep / glob / read / write (streaming) / get-from-kb / query_files / retrieve_text_nodes / text-to-image tools; MCP custom header support\n- **RAG / Text-to-SQL**: Decoupled Database module from chatbot (largest refactor, +6866/-424), multi-database support, agentic text-to-SQL service, agent metadata selection & refactor\n- **DeepEval**: Integrated DeepEval evaluation framework, API adjustments, synthesizer for auto test data generation\n- **MaiGPT Platform**: MaiGPT chatbot feature, RAG tool support, bulk org settings management command\n- **Infrastructure**: Health check API (/health/dependencies), CNAME socket event real-time push, async serializer performance optimization for completions view\n\n### **What Have I Learned:**\n- **Large-scale System Design**: How to decouple and refactor modules in a complex production system\n- **Agent Architecture**: Hands-on development of tool use, multi-agent collaboration, streaming, and other core LLM agent techniques\n- **Engineering Quality**: Pre-commit hooks, async performance optimization, evaluation system design",
+          "links": []
+        }
+      ]
+    }
+  },
+  "admin_portfolio": [
+    {
+      "id": "adl-final",
+      "title": {
+        "zh": "ADL 期末：LLM Jailbreak 攻擊（DPO）",
+        "en": "ADL Final: LLM Jailbreak Attack via DPO"
+      },
+      "subtitle": {
+        "zh": "Python · LLM · RLHF · DPO",
+        "en": "Python · LLM · RLHF · DPO"
+      },
+      "type": "github",
+      "description": {
+        "zh": "NTU 深度學習應用課程期末專案。以 DPO 訓練 LLM Rewriter，透過 safety guard 與 usefulness judge 作為 reward signal，使模型學會改寫 prompt 以繞過安全過濾器。",
+        "en": "NTU ADL final project. Trains an LLM rewriter via DPO using safety guard and usefulness judge as reward signals to rewrite prompts that bypass LLM safety filters."
+      },
+      "thumbnail": "adl-final.png",
+      "tags": [
+        "Python",
+        "LLM",
+        "DPO",
+        "RLHF",
+        "NLP",
+        "Team Project"
+      ],
+      "links": {
+        "github": "https://github.com/joshuachen0213/ADL-Final"
+      },
+      "date": "2025-12-15"
+    },
+    {
+      "id": "listen-up",
+      "title": {
+        "zh": "金曲猜歌王",
+        "en": "Listen Up — Music Guessing Game"
+      },
+      "subtitle": {
+        "zh": "Vue.js · Express.js · TypeScript",
+        "en": "Vue.js · Express.js · TypeScript"
+      },
+      "type": "github",
+      "description": {
+        "zh": "基於 Hitster 桌遊規則的本地多人猜歌遊戲，支援 2-8 人、代幣系統、卡牌時間線排序與挑戰機制。",
+        "en": "Local multiplayer music guessing game based on Hitster rules; supports 2-8 players, token system, timeline card placement, and challenge mechanics."
+      },
+      "thumbnail": "listen-up.png",
+      "tags": [
+        "Vue.js",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "Game",
+        "Personal Project"
+      ],
+      "links": {
+        "github": "https://github.com/stanfc/listen-up"
+      },
+      "date": "2026-3-12"
+    },
+    {
+      "id": "guardcircle",
+      "title": {
+        "zh": "GuardCircle 家人防詐守護系統",
+        "en": "GuardCircle — Family Anti-Scam App"
+      },
+      "subtitle": {
+        "zh": "React Native · Go · AWS Lambda",
+        "en": "React Native · Go · AWS Lambda"
+      },
+      "type": "github",
+      "description": {
+        "zh": "一套家人防詐守護系統，支援文字、網址、電話、圖片、檔案等多模態內容偵測，並提供家庭圈事件總覽與 AI 風險評估。",
+        "en": "Family anti-scam guardian system with multi-modal detection (text, URL, phone, image, file) and AI-powered risk assessment."
+      },
+      "thumbnail": "guard-circle.png",
+      "tags": [
+        "React Native",
+        "TypeScript",
+        "Go",
+        "Python",
+        "AWS",
+        "AI",
+        "Team Project"
+      ],
+      "links": {
+        "github": "https://github.com/yenyu3/guardcircle-app"
+      },
+      "date": "2025-03-27"
+    },
+    {
+      "id": "vfx",
+      "title": {
+        "zh": "視覺特效（VFX）",
+        "en": "VFX"
+      },
+      "subtitle": {
+        "zh": "Blender · HDR · 圖像融合",
+        "en": "Blender · HDR · Image Fusion"
+      },
+      "type": "video",
+      "description": {
+        "zh": "課程作品：實作 HDR、圖像配對與融合，並以 Blender 製作動畫。",
+        "en": "Course projects: HDR, matching/fusion, and Blender animations."
+      },
+      "thumbnail": "vfx.png",
+      "tags": [
+        "VFX",
+        "Blender",
+        "Python",
+        "Computer Vision",
+        "Team Project"
+      ],
+      "links": {
+        "github": "https://github.com/leolinpotato/ntu-vfx-2024",
+        "video": "https://www.youtube.com/watch?v=e7_iIwEm398",
+        "video2": "https://youtu.be/KqNNqOy3fpY?si=4KVSvJS_8_uxlPGE"
+      },
+      "date": "2024-06-01"
+    },
+    {
+      "id": "caged",
+      "title": {
+        "zh": "CAGED 遊戲",
+        "en": "CAGED Game"
+      },
+      "subtitle": {
+        "zh": "Game · QA · VFX",
+        "en": "Game · QA · VFX"
+      },
+      "type": "web",
+      "description": {
+        "zh": "參與小組開發，負責品質修復及特效。",
+        "en": "Team project; QA and VFX."
+      },
+      "thumbnail": "caged.png",
+      "tags": [
+        "Game",
+        "VFX",
+        "C#",
+        "Unity",
+        "Team Project"
+      ],
+      "links": {
+        "demo": "https://fhvirus.itch.io/caged?fbclid=IwZXh0bgNhZW0CMTAAAR3sYiRt9_hX8UyU68FCerY5O92KcjUp45jFvAippdTQ-LYH3yQsvf7chzQ_aem__vxlOau9PK69ds_E1oiPTQ"
+      },
+      "date": "2024-10-01"
+    },
+    {
+      "id": "yt-emotion",
+      "title": {
+        "zh": "YouTube 評論情緒分析",
+        "en": "YouTube Comment Emotion Tool"
+      },
+      "subtitle": {
+        "zh": "ML · Python",
+        "en": "ML · Python"
+      },
+      "type": "github",
+      "description": {
+        "zh": "文字雲與模型訓練腳本，支援自訂語料。",
+        "en": "Word cloud and training scripts; custom datasets supported."
+      },
+      "thumbnail": "side_project.png",
+      "tags": [
+        "ML",
+        "NLP",
+        "Python",
+        "Personal Project"
+      ],
+      "links": {
+        "github": "https://github.com/stanfc/Youtube-Comment-Emotion-Prediction-Tool"
+      },
+      "date": "2024-09-01"
+    },
+    {
+      "id": "special-topic",
+      "title": {
+        "zh": "專題研究：使用深度預測改善 Gaussian Splatting",
+        "en": "Special Topic: Gaussian Splatting with Depth Prediction"
+      },
+      "subtitle": {
+        "zh": "Research · 3D",
+        "en": "Research · 3D"
+      },
+      "type": "paper",
+      "description": {
+        "zh": "以深度估計降低 splatting 噪點，包含方法與結果報告。",
+        "en": "Reduce splatting noise using depth estimation; report included."
+      },
+      "thumbnail": "special_topic.png",
+      "tags": [
+        "Research",
+        "Rendering",
+        "Team Project"
+      ],
+      "links": {
+        "paper": "https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing"
+      },
+      "date": "2025-01-15"
+    },
+    {
+      "id": "pbrt-lsystem",
+      "title": {
+        "zh": "PBRT-v4 L-System 支援",
+        "en": "L-System Support in PBRT-v4"
+      },
+      "subtitle": {
+        "zh": "Rendering · C++",
+        "en": "Rendering · C++"
+      },
+      "type": "github",
+      "description": {
+        "zh": "在 PBRT-v4 中新增 L-System 支援與 3D 圖形生成。",
+        "en": "Added L-System graphics generation to PBRT-v4."
+      },
+      "thumbnail": "rendering.png",
+      "tags": [
+        "Rendering",
+        "C++",
+        "PBRT",
+        "Personal Project"
+      ],
+      "links": {
+        "github": "https://github.com/stanfc/pbrt-plus-v4/tree/l-system"
+      },
+      "date": "2025-05-10"
+    },
+    {
+      "id": "rag-agent",
+      "title": {
+        "zh": "RAG Agent",
+        "en": "RAG Agent"
+      },
+      "subtitle": {
+        "zh": "Python · LLM",
+        "en": "Python · LLM"
+      },
+      "type": "github",
+      "description": {
+        "zh": "LaTeX 助手：讀取 PDF、RAG 問答、工具寫檔。",
+        "en": "LaTeX helper: PDF ingest, RAG QA, file writing."
+      },
+      "thumbnail": "rag.png",
+      "tags": [
+        "RAG",
+        "Python",
+        "Agent",
+        "LLM",
+        "Personal Project"
+      ],
+      "links": {
+        "github": "https://github.com/stanfc/agent-project"
+      },
+      "date": "2025-04-10"
+    },
+    {
+      "id": "research-agent",
+      "title": {
+        "zh": "Deep Research Agent",
+        "en": "Deep Research Agent"
+      },
+      "subtitle": {
+        "zh": "Web · Agent",
+        "en": "Web · Agent"
+      },
+      "type": "github",
+      "description": {
+        "zh": "可自動搜尋網路，精準檢索所需資訊。",
+        "en": "Autonomous web search; precise retrieval."
+      },
+      "thumbnail": "deep_research.png",
+      "tags": [
+        "Agent",
+        "Search",
+        "LLM",
+        "Personal Project"
+      ],
+      "links": {
+        "github": "https://github.com/stanfc/agent-project"
+      },
+      "date": "2025-04-20"
+    },
+    {
+      "id": "calendar-app",
+      "title": {
+        "zh": "行事曆分享與訂閱平台",
+        "en": "Calendar Sharing & Subscription"
+      },
+      "subtitle": {
+        "zh": "React · Node.js",
+        "en": "React · Node.js"
+      },
+      "type": "web",
+      "description": {
+        "zh": "前端主要負責；分享與訂閱。",
+        "en": "Frontend lead; sharing & subscription."
+      },
+      "thumbnail": "calendar.png",
+      "tags": [
+        "React",
+        "Web",
+        "Node.js",
+        "Team Project"
+      ],
+      "links": {
+        "paper": "https://drive.google.com/file/d/1UOdeThkxDmk1_2xY83AmGwgHIregeKoH/view?usp=sharing"
+      },
+      "date": "2024-06-15"
+    },
+    {
+      "id": "LLM-based-pdf-reader-app",
+      "title": {
+        "zh": "IspBirntg 基於 LLM 的 PDF 閱讀器",
+        "en": "IspBirntg LLM-based PDF Reader"
+      },
+      "subtitle": {
+        "zh": "React · Django",
+        "en": "React · Django"
+      },
+      "type": "web",
+      "description": {
+        "zh": "本地部屬基於 LLM 的 PDF 閱讀器，支援多模態以及 RAG",
+        "en": "Self-hosted LLM-based PDF reader with multi-modal and RAG support"
+      },
+      "thumbnail": "ispbirntg.png",
+      "tags": [
+        "React",
+        "Web",
+        "Django",
+        "Side Project",
+        "LLM",
+        "RAG"
+      ],
+      "links": {
+        "github": "https://github.com/stanfc/IspBirntg"
+      },
+      "date": "2025-09-15"
+    }
+  ],
+  "admin_transcript": {
+    "en": [
+      {
+        "Course": "Calculus (I)",
+        "Grade": "A",
+        "Credits": "4"
+      },
+      {
+        "Course": "Calculus (II)",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "General Physics A (I)",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "General Physics A (II)",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "Algorithms",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Computer and Programming",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Linear Algebra",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Elementary Graph Theory",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Computer Networks",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Database Systems",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Numerical Methods",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Cryptography",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Discrete Mathematics",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Digital Circuit Design",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Data Structures and Object-Oriented Programming",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Artificial Intelligence",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Algorithm",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "System Programming",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Formal Language and Automata Theory",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Computer",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Probability",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "Operating System",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Digital Visual Effect",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Special Research",
+        "Grade": "A+",
+        "Credits": "4 (2 semester)"
+      },
+      {
+        "Course": "Computer Architecture",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Computer Logic",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Machine Learning",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "Game Programming",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Computer Network Laboratory",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "Digital Image Synthesis",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Principle of Microeconomics",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Principle of Macroeconomics",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "U.S. Foreign Policy",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "Intro to Music",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "General Psychology",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Intro to Philosophy",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "Technology Ethics",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "Molecular Aesthetics",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Japanese (I) (1)",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "Japanese (I) (2)",
+        "Grade": "A+",
+        "Credits": "3"
+      }
+    ],
+    "zh": [
+      {
+        "Course": "微積分A一",
+        "Grade": "A",
+        "Credits": "4"
+      },
+      {
+        "Course": "微積分A二",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "普通物理A一",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "普通物理A二",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "演算法",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "計算機概論與程式設計",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "線性代數",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "基礎圖論",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "計算機網路概論",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "資料庫系統概論",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "數值方法",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "密碼學導論",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "離散數學",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "數位電路設計",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "資料結構與件導向程式設計",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "人工智慧概論",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "演算法",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "系統程式設計",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "自動機與形式語言",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "計算機概論",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "機率",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "作業系統",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "數位視覺效果",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "專題研究",
+        "Grade": "A+",
+        "Credits": "4（2 學期）"
+      },
+      {
+        "Course": "計算機結構",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "計算邏輯簡介",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "機器學習",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "遊戲設計",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "計算機網路實驗",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "數位影像生成",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "個體經濟學原理",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "總體經濟學原理",
+        "Grade": "A+",
+        "Credits": "4"
+      },
+      {
+        "Course": "美國外交政策",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "音樂概論",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "普通心理學",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "哲學導論",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "科技倫理",
+        "Grade": "A+",
+        "Credits": "2"
+      },
+      {
+        "Course": "分子美學",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "日文一上",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "日文一下",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "深度學習之應用",
+        "Grade": "A+",
+        "Credits": "3"
+      },
+      {
+        "Course": "多模態人工智慧",
+        "Grade": "A",
+        "Credits": "3"
+      },
+      {
+        "Course": "金融科技導論",
+        "Grade": "A",
+        "Credits": "3"
+      }
+    ]
+  }
+}
