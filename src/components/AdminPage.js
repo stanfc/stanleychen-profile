@@ -6,6 +6,7 @@ import { workExperienceData, saveWorkExperienceData, resetWorkExperienceData, ge
 import { skillsData, saveSkillsData, resetSkillsData, getSkillsData } from '../data/skills';
 import { portfolioItems, savePortfolioItems, resetPortfolioItems, getPortfolioItems } from '../data/portfolio';
 import { experienceData, saveExperienceData, resetExperienceData, getExperienceData } from '../data/experience';
+import { transcriptData, saveTranscriptData, resetTranscriptData, getTranscriptData } from '../data/transcript';
 
 // ─── Toast ────────────────────────────────────────────────────────────────────
 function Toast({ msg, onDone }) {
@@ -418,6 +419,89 @@ function PortfolioTab({ onSave }) {
   );
 }
 
+// ─── Transcript tab ───────────────────────────────────────────────────────────
+function TranscriptTab({ onSave }) {
+  const [data, setData] = useState(() => ({
+    en: getTranscriptData('en'),
+    zh: getTranscriptData('zh'),
+  }));
+  const [activeLang, setActiveLang] = useState('zh');
+
+  const setRow = (lang, idx, field, val) =>
+    setData((d) => ({
+      ...d,
+      [lang]: d[lang].map((row, i) => i === idx ? { ...row, [field]: val } : row),
+    }));
+
+  const addRow = (lang) =>
+    setData((d) => ({ ...d, [lang]: [...d[lang], { Course: '', Grade: '', Credits: '' }] }));
+
+  const removeRow = (lang, idx) =>
+    setData((d) => ({ ...d, [lang]: d[lang].filter((_, i) => i !== idx) }));
+
+  const save = () => { saveTranscriptData(data); onSave('成績單已儲存'); };
+  const reset = () => { resetTranscriptData(); setData({ en: transcriptData.en, zh: transcriptData.zh }); onSave('已還原預設'); };
+
+  const rows = data[activeLang];
+
+  return (
+    <div className="admin-section">
+      <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', alignItems: 'center' }}>
+        {['zh', 'en'].map((lang) => (
+          <button key={lang} className={`admin-tab${activeLang === lang ? ' active' : ''}`} onClick={() => setActiveLang(lang)}>
+            {lang === 'zh' ? '🇹🇼 中文' : '🇺🇸 English'}
+          </button>
+        ))}
+        <button className="admin-btn admin-btn-secondary" style={{ fontSize: '0.8rem', padding: '0.3rem 0.7rem', marginLeft: 'auto' }} onClick={() => addRow(activeLang)}>
+          + 新增課程
+        </button>
+      </div>
+
+      <div className="admin-card" style={{ padding: '0.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid var(--border-overlay)' }}>
+              <th style={{ textAlign: 'left', padding: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)', width: '55%' }}>
+                {activeLang === 'zh' ? '課程' : 'Course'}
+              </th>
+              <th style={{ textAlign: 'left', padding: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)', width: '15%' }}>
+                {activeLang === 'zh' ? '成績' : 'Grade'}
+              </th>
+              <th style={{ textAlign: 'left', padding: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)', width: '15%' }}>
+                {activeLang === 'zh' ? '學分' : 'Credits'}
+              </th>
+              <th style={{ width: '15%' }} />
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, idx) => (
+              <tr key={idx} style={{ borderBottom: '1px solid var(--border-overlay, #333)' }}>
+                <td style={{ padding: '0.3rem 0.5rem' }}>
+                  <input className="admin-input" style={{ padding: '0.3rem 0.5rem' }} value={row.Course} onChange={(e) => setRow(activeLang, idx, 'Course', e.target.value)} />
+                </td>
+                <td style={{ padding: '0.3rem 0.5rem' }}>
+                  <input className="admin-input" style={{ padding: '0.3rem 0.5rem' }} value={row.Grade} onChange={(e) => setRow(activeLang, idx, 'Grade', e.target.value)} placeholder="A+" />
+                </td>
+                <td style={{ padding: '0.3rem 0.5rem' }}>
+                  <input className="admin-input" style={{ padding: '0.3rem 0.5rem' }} value={row.Credits} onChange={(e) => setRow(activeLang, idx, 'Credits', e.target.value)} placeholder="3" />
+                </td>
+                <td style={{ padding: '0.3rem 0.5rem' }}>
+                  <button className="admin-btn admin-btn-danger" style={{ fontSize: '0.75rem', padding: '0.2rem 0.5rem' }} onClick={() => removeRow(activeLang, idx)}>✕</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="admin-actions">
+        <button className="admin-btn admin-btn-primary" onClick={save}>儲存</button>
+        <button className="admin-btn admin-btn-danger" onClick={reset}>還原預設</button>
+      </div>
+    </div>
+  );
+}
+
 // ─── Experience tab ───────────────────────────────────────────────────────────
 const EMPTY_EXP_ITEM = { date: '', title: '', content: '', tooltip: '', links: [] };
 
@@ -525,7 +609,7 @@ function ExperienceTab({ onSave }) {
 // ─── Export tab ───────────────────────────────────────────────────────────────
 function ExportTab({ onSave }) {
   const buildExport = () => {
-    const keys = ['admin_aboutMe', 'admin_education', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio'];
+    const keys = ['admin_aboutMe', 'admin_education', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio', 'admin_transcript'];
     const result = {};
     keys.forEach((k) => {
       const v = localStorage.getItem(k);
@@ -554,7 +638,7 @@ function ExportTab({ onSave }) {
   };
 
   const clearAll = () => {
-    ['admin_aboutMe', 'admin_education', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio']
+    ['admin_aboutMe', 'admin_education', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio', 'admin_transcript']
       .forEach((k) => localStorage.removeItem(k));
     setText('');
     onSave('已清除所有 localStorage 暫存');
@@ -604,6 +688,7 @@ const TABS = [
   { key: 'skills', label: '技能' },
   { key: 'experience', label: '經驗' },
   { key: 'portfolio', label: '作品集' },
+  { key: 'transcript', label: '成績單' },
   { key: 'export', label: '匯出/匯入' },
 ];
 
@@ -638,6 +723,7 @@ const AdminPage = () => {
       {tab === 'work' && <WorkExperienceTab onSave={showToast} />}
       {tab === 'skills' && <SkillsTab onSave={showToast} />}
       {tab === 'experience' && <ExperienceTab onSave={showToast} />}
+      {tab === 'transcript' && <TranscriptTab onSave={showToast} />}
       {tab === 'portfolio' && <PortfolioTab onSave={showToast} />}
       {tab === 'export' && <ExportTab onSave={showToast} />}
 
