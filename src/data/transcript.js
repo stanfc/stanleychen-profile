@@ -414,7 +414,7 @@ export const transcriptData = {
     },
     {
       "Course": "金融科技導論",
-      "Grade": "A",
+      "Grade": "A-",
       "Credits": "3"
     }
   ]

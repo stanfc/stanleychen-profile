@@ -53,7 +53,8 @@ export const portfolioItems = [
       "Personal Project"
     ],
     "links": {
-      "github": "https://github.com/stanfc/listen-up"
+      "github": "https://github.com/stanfc/listen-up",
+      "demo": "https://listen-up-purple-pond-1943.fly.dev/"
     },
     "date": "2026-3-12"
   },
