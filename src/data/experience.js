@@ -134,6 +134,10 @@ export const experienceData = {
           {
             "label": "🔗 查看專案",
             "url": "https://github.com/stanfc/listen-up"
+          },
+          {
+            "label": "🎮 玩遊戲",
+            "url": "https://listen-up-purple-pond-1943.fly.dev/"
           }
         ]
       },
@@ -281,6 +285,10 @@ export const experienceData = {
           {
             "label": "🔗 View Project",
             "url": "https://github.com/stanfc/listen-up"
+          },
+          {
+            "label": "🎮 Play Game",
+            "url": "https://listen-up-purple-pond-1943.fly.dev/"
           }
         ]
       },
