@@ -1,143 +1,85 @@
-# 🚀 GitHub Pages 部署指南
+# 🚀 部署指南
 
-## 前置準備
+網站透過 **GitHub Actions** 自動部署到 GitHub Pages：
 
-### 1. 確保你有 GitHub 帳號
-如果還沒有，請先註冊：https://github.com
+**https://stanfc.github.io/stanleychen-profile**
 
-### 2. 創建 GitHub Repository
-1. 登入 GitHub
-2. 點擊右上角的 "+" 號，選擇 "New repository"
-3. Repository 名稱：`stanley-profile`
-4. 設為 Public（GitHub Pages 需要）
-5. 不要勾選 "Add a README file"（我們已經有了）
-6. 點擊 "Create repository"
+## 運作方式
 
-## 部署步驟
+只要 push 到 `main`，[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 就會自動：
 
-### 1. 初始化 Git（如果還沒有的話）
-```bash
-git init
-```
+1. `npm ci` 安裝依賴
+2. `npm run build` 建置正式版本
+3. 複製 `build/index.html` 為 `build/404.html`（讓 `/portfolio`、`/transcript` 等路由重新整理時不會 404）
+4. 上傳 `build/` 並部署到 GitHub Pages
 
-### 2. 添加遠端倉庫
-```bash
-git remote add origin https://github.com/stanfc/stanley-profile.git
-```
+部署進度可在 repository 的 **Actions** 分頁查看，通常 1–3 分鐘完成。
 
-### 3. 提交所有檔案
-```bash
-git add .
-git commit -m "Initial commit: Stanley Chen Portfolio"
-```
+## 首次設定（只需做一次）
 
-### 4. 推送到 GitHub
-```bash
-git push -u origin main
-```
+1. 進入 GitHub repository → **Settings** → **Pages**
+2. **Build and deployment → Source** 選擇 **GitHub Actions**
+3. 儲存後，push 一次 `main`，或到 Actions 分頁手動執行 workflow
 
-### 5. 部署到 GitHub Pages
-```bash
-npm run deploy
-```
+> 如果 Source 仍是「Deploy from a branch / gh-pages」，workflow 部署的內容不會生效。
 
-## 部署後設定
-
-### 1. 設定 GitHub Pages
-1. 進入你的 GitHub repository
-2. 點擊 "Settings" 標籤
-3. 左側選單找到 "Pages"
-4. Source 選擇 "Deploy from a branch"
-5. Branch 選擇 "gh-pages"
-6. 點擊 "Save"
-
-### 2. 等待部署完成
-- 通常需要 5-10 分鐘
-- 你可以在 Actions 標籤中查看部署進度
-
-## 更新網站
-
-每次修改後，執行以下命令重新部署：
+## 日常更新流程
 
 ```bash
-# 提交變更
-git add .
-git commit -m "Update: 描述你的變更"
-git push
-
-# 部署到 GitHub Pages
-npm run deploy
+git add -A
+git commit -m "描述你的變更"
+git push origin main
 ```
 
-## 自動化部署（可選）
+push 完成後就會自動部署，不需要再執行其他指令。
 
-### 設定 GitHub Actions
-創建 `.github/workflows/deploy.yml`：
+### 手動觸發部署
 
-```yaml
-name: Deploy to GitHub Pages
+不想 push 新 commit 也可以重新部署：
 
-on:
-  push:
-    branches: [ main ]
+1. 到 repository 的 **Actions** 分頁
+2. 左側選擇 **Deploy to GitHub Pages**
+3. 點 **Run workflow** → 選 `main` → **Run workflow**
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
-        
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Build
-      run: npm run build
-      
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+## 本機開發
+
+```bash
+npm install        # 安裝依賴
+npm start          # 開發伺服器：http://localhost:3000/stanleychen-profile
+npm run build      # 建置正式版本到 build/
 ```
+
+### 內容管理（Admin）
+
+開發模式下可在 `/admin` 編輯各區塊內容，修改會存在瀏覽器的 localStorage，**不會**直接進入正式站。要套用到正式站：
+
+1. 在 `/admin` →「匯出/匯入」→「產生 JSON」，複製後存成 `export.json`
+2. 執行 `npm run sync-admin export.json`，把內容寫回 `src/data/*.js`
+3. commit 並 push
 
 ## 常見問題
 
-### Q: 部署後網站無法訪問
-A: 檢查以下幾點：
-1. Repository 是否設為 Public
-2. GitHub Pages 是否正確設定
-3. 等待 5-10 分鐘讓部署完成
+### Q: push 了但 Actions 沒有執行？
+- 確認 push 的是 `main` 分支
+- 確認 `.github/workflows/deploy.yml` 已經 commit 並 push
 
-### Q: 圖片無法顯示
-A: 確保圖片路徑正確：
-- 使用相對路徑：`/profile_image.jpg`
-- 或使用絕對路徑：`https://stanfc.github.io/stanley-profile/profile_image.jpg`
+### Q: Actions 成功了但網站沒更新？
+- 確認 Settings → Pages → Source 是 **GitHub Actions**（見「首次設定」）
+- 瀏覽器強制重新整理（Cmd/Ctrl + Shift + R）清除快取
 
-### Q: 樣式無法載入
-A: 檢查 CSS 檔案是否正確匯入：
-- 確保 `src/styles/index.css` 存在
-- 確保所有樣式檔案都正確匯入
+### Q: Build 步驟失敗？
+- 先在本機執行 `npm run build`，確認沒有編譯錯誤
+- 若是新增了套件，確認 `package-lock.json` 也有一起 commit（CI 使用 `npm ci`）
 
-## 網站連結
+### Q: 本機正常但正式站內容不同？
+- 本機 dev 模式會優先讀取 `/admin` 存在 localStorage 的資料；正式站只讀 `src/data/*.js`。請依「內容管理」步驟同步。
 
-部署完成後，你的網站將在：
-**https://stanfc.github.io/stanley-profile**
+### Q: 圖片無法顯示？
+- 圖片放在 `public/`，在資料檔中只寫檔名（例如 `"thumbnail": "listen-up.png"`），程式會自動加上 `PUBLIC_URL`。
 
-## 自定義域名（可選）
+### Q: 想改網址？
+- 修改 `package.json` 的 `homepage` 欄位，以及 `src/App.js` 中 `Router` 的 `basename`。
 
-如果你想使用自定義域名：
-1. 購買域名
-2. 在 GitHub Pages 設定中添加自定義域名
-3. 在域名提供商處設定 DNS 記錄
+## 舊的手動部署方式（備用）
 
-## 技術支援
-
-如果遇到問題，可以：
-1. 檢查 GitHub Actions 日誌
-2. 查看瀏覽器開發者工具的錯誤訊息
-3. 確認所有依賴都已正確安裝 
+`package.json` 仍保留 `npm run deploy`（使用 `gh-pages` 套件推送到 `gh-pages` 分支）。只有在 Pages Source 改回「Deploy from a branch → gh-pages」時才會生效；一般情況請使用上面的 GitHub Actions 流程。
