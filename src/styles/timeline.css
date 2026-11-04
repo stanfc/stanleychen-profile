@@ -196,3 +196,103 @@
     font-size: 0.8em;
   }
 } 
+/* Research & Publications */
+.research-subtitle {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px 0;
+}
+
+.research-subtitle:not(:first-of-type) {
+  margin-top: 8px;
+}
+
+.publication-title {
+  font-weight: 800;
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.publication-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+.publication-title a:hover {
+  color: var(--primary-color);
+}
+
+.publication-authors {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.publication-authors strong {
+  color: var(--text-primary);
+}
+
+.publication-note {
+  margin-top: 4px;
+  font-size: 0.85em;
+  color: var(--text-secondary);
+  opacity: 0.85;
+}
+
+/* Inline links inside About Me */
+.about-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+/* Expandable technical details (touch-friendly alternative to hover tooltips) */
+.expand-details {
+  margin-top: 10px;
+}
+
+.expand-details > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.expand-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.expand-details-body {
+  margin-top: 8px;
+  padding: 14px 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-overlay);
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.expand-details-body h3 {
+  margin: 0 0 8px 0;
+  color: var(--primary-color);
+  font-size: 1em;
+}
+
+.expand-details-body ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.expand-details-body li {
+  margin: 4px 0;
+}
+
+.expand-details-body strong {
+  color: var(--primary-color);
+}

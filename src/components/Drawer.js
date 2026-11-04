@@ -12,7 +12,7 @@ const Drawer = ({ isOpen, onClose, currentLang }) => {
       contact: "聯絡方式",
     },
     en: {
-      title: "Stanley Chen",
+      title: "Shuan-Shaw Chen",
       subtitle: "Personal Portfolio",
       about: "About Me",
       transcript: "Transcript",

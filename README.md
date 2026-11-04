@@ -1,6 +1,6 @@
-# Stanley Chen - Personal Portfolio
+# Shuan-Shaw Chen - Personal Portfolio
 
-陳璿修 (Stanley Chen) 的個人履歷網站，使用 React 開發。
+陳璿修 (Shuan-Shaw Chen) 的個人作品集網站，使用 React 開發。
 
 ## 🌟 特色
 
@@ -71,7 +71,7 @@ src/
 
 ## 🌐 部署
 
-網站已部署在：https://stanfc.github.io/stanley-profile
+網站已部署在：https://stanfc.github.io/stanleychen-profile
 
 ## 📄 授權
 

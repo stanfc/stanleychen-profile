@@ -5,12 +5,12 @@ const Header = ({ currentLang }) => {
   const content = {
     zh: {
       name: "陳璿修",
-      title: "資訊工程學系學生 | 後端工程師 | 生成式 AI 工程師",
+      title: "台大資工碩士生 | 電腦視覺研究者 | 生成式 AI 工程師",
       location: "臺北市，臺灣"
     },
     en: {
       name: "陳璿修 Shuan-Shaw Chen",
-      title: "Computer Science Student | Backend Engineer | Generative AI Engineer", 
+      title: "NTU CS M.S. Student | Computer Vision Researcher | Generative AI Engineer",
       location: "Taipei, Taiwan"
     }
   };
@@ -64,6 +64,17 @@ const Header = ({ currentLang }) => {
             className="github-link"
           >
             github.com/stanfc
+          </a>
+        </div>
+        <div className="contact-item">
+          <span>💼</span>
+          <a 
+            href="https://www.linkedin.com/in/shuanshaw-chen" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            linkedin.com/in/shuanshaw-chen
           </a>
         </div>
       </div>

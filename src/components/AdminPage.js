@@ -7,6 +7,7 @@ import { skillsData, saveSkillsData, resetSkillsData, getSkillsData } from '../d
 import { portfolioItems, savePortfolioItems, resetPortfolioItems, getPortfolioItems } from '../data/portfolio';
 import { experienceData, saveExperienceData, resetExperienceData, getExperienceData } from '../data/experience';
 import { transcriptData, saveTranscriptData, resetTranscriptData, getTranscriptData } from '../data/transcript';
+import { researchData, saveResearchData, resetResearchData, getResearchData } from '../data/research';
 
 // ─── Toast ────────────────────────────────────────────────────────────────────
 function Toast({ msg, onDone }) {
@@ -95,7 +96,7 @@ function EducationTab({ onSave }) {
   const addItem = (lang) =>
     setData((d) => ({
       ...d,
-      [lang]: { ...d[lang], items: [...d[lang].items, { date: '', school: '', department: '', gpa: '' }] },
+      [lang]: { ...d[lang], items: [...d[lang].items, { date: '', school: '', department: '', gpa: '', details: '' }] },
     }));
 
   const removeItem = (lang, idx) =>
@@ -128,11 +129,11 @@ function EducationTab({ onSave }) {
               <div className="admin-row">
                 <div className="admin-field">
                   <label>期間</label>
-                  <input className="admin-input" value={item.date} onChange={(e) => setItem(lang, idx, 'date', e.target.value)} placeholder="2023-2026" />
+                  <input className="admin-input" value={item.date} onChange={(e) => setItem(lang, idx, 'date', e.target.value)} placeholder="Sep 2023 – Jun 2026" />
                 </div>
                 <div className="admin-field">
                   <label>GPA</label>
-                  <input className="admin-input" value={item.gpa} onChange={(e) => setItem(lang, idx, 'gpa', e.target.value)} placeholder="GPA: 4.26 / 4.3" />
+                  <input className="admin-input" value={item.gpa} onChange={(e) => setItem(lang, idx, 'gpa', e.target.value)} placeholder="GPA: 4.22 / 4.30" />
                 </div>
               </div>
               <div className="admin-row" style={{ marginTop: '0.5rem' }}>
@@ -145,7 +146,162 @@ function EducationTab({ onSave }) {
                   <input className="admin-input" value={item.department} onChange={(e) => setItem(lang, idx, 'department', e.target.value)} />
                 </div>
               </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>補充（指導教授、實驗室、排名等；支援 HTML，如 &lt;br&gt;）</label>
+                <input className="admin-input" value={item.details || ''} onChange={(e) => setItem(lang, idx, 'details', e.target.value)} />
+              </div>
               {idx < data[lang].items.length - 1 && <hr className="admin-divider" />}
+            </div>
+          ))}
+        </div>
+      ))}
+      <div className="admin-actions">
+        <button className="admin-btn admin-btn-primary" onClick={save}>儲存</button>
+        <button className="admin-btn admin-btn-danger" onClick={reset}>還原預設</button>
+      </div>
+    </div>
+  );
+}
+
+// ─── Research tab ─────────────────────────────────────────────────────────────
+const EMPTY_PUB = { title: '', url: '', authors: '', venue: '', note: '' };
+const EMPTY_RESEARCH_ITEM = { date: '', title: '', role: '', description: '', tooltip: '', links: [] };
+
+function ResearchTab({ onSave }) {
+  const [data, setData] = useState(() => getResearchData());
+
+  const setField = (lang, field, val) =>
+    setData((d) => ({ ...d, [lang]: { ...d[lang], [field]: val } }));
+
+  const setListItem = (lang, list, idx, field, val) =>
+    setData((d) => ({
+      ...d,
+      [lang]: { ...d[lang], [list]: d[lang][list].map((it, i) => i === idx ? { ...it, [field]: val } : it) },
+    }));
+
+  const addListItem = (lang, list, empty) =>
+    setData((d) => ({ ...d, [lang]: { ...d[lang], [list]: [...(d[lang][list] || []), { ...empty }] } }));
+
+  const removeListItem = (lang, list, idx) =>
+    setData((d) => ({ ...d, [lang]: { ...d[lang], [list]: d[lang][list].filter((_, i) => i !== idx) } }));
+
+  const save = () => { saveResearchData(data); onSave('研究與論文已儲存'); };
+  const reset = () => { resetResearchData(); setData(researchData); onSave('已還原預設'); };
+
+  return (
+    <div className="admin-section">
+      {['zh', 'en'].map((lang) => (
+        <div key={lang} className="admin-card">
+          <div className="admin-card-header">
+            <h3>{lang === 'zh' ? '🇹🇼 中文' : '🇺🇸 English'}</h3>
+          </div>
+          <div className="admin-row">
+            <div className="admin-field">
+              <label>區塊標題</label>
+              <input className="admin-input" value={data[lang].title} onChange={(e) => setField(lang, 'title', e.target.value)} />
+            </div>
+            <div className="admin-field">
+              <label>論文小標</label>
+              <input className="admin-input" value={data[lang].publicationsTitle} onChange={(e) => setField(lang, 'publicationsTitle', e.target.value)} />
+            </div>
+            <div className="admin-field">
+              <label>研究經歷小標</label>
+              <input className="admin-input" value={data[lang].projectsTitle} onChange={(e) => setField(lang, 'projectsTitle', e.target.value)} />
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '1rem 0 0.5rem' }}>
+            <h2>論文</h2>
+            <button className="admin-btn admin-btn-secondary" style={{ fontSize: '0.8rem', padding: '0.3rem 0.7rem' }} onClick={() => addListItem(lang, 'publications', EMPTY_PUB)}>+ 新增論文</button>
+          </div>
+          {(data[lang].publications || []).map((pub, idx) => (
+            <div key={idx} style={{ marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>第 {idx + 1} 篇</span>
+                <button className="admin-btn admin-btn-danger" style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem' }} onClick={() => removeListItem(lang, 'publications', idx)}>刪除</button>
+              </div>
+              <div className="admin-field">
+                <label>標題</label>
+                <input className="admin-input" value={pub.title} onChange={(e) => setListItem(lang, 'publications', idx, 'title', e.target.value)} />
+              </div>
+              <div className="admin-row" style={{ marginTop: '0.5rem' }}>
+                <div className="admin-field">
+                  <label>連結</label>
+                  <input className="admin-input" value={pub.url} onChange={(e) => setListItem(lang, 'publications', idx, 'url', e.target.value)} placeholder="https://openreview.net/..." />
+                </div>
+                <div className="admin-field">
+                  <label>會議 / 狀態</label>
+                  <input className="admin-input" value={pub.venue} onChange={(e) => setListItem(lang, 'publications', idx, 'venue', e.target.value)} placeholder="ICLR 2027 — Under Review" />
+                </div>
+              </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>作者（支援 HTML，如 &lt;strong&gt;）</label>
+                <input className="admin-input" value={pub.authors} onChange={(e) => setListItem(lang, 'publications', idx, 'authors', e.target.value)} />
+              </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>備註</label>
+                <input className="admin-input" value={pub.note} onChange={(e) => setListItem(lang, 'publications', idx, 'note', e.target.value)} placeholder="* Equal contribution" />
+              </div>
+              <hr className="admin-divider" />
+            </div>
+          ))}
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '1rem 0 0.5rem' }}>
+            <h2>研究經歷</h2>
+            <button className="admin-btn admin-btn-secondary" style={{ fontSize: '0.8rem', padding: '0.3rem 0.7rem' }} onClick={() => addListItem(lang, 'items', EMPTY_RESEARCH_ITEM)}>+ 新增經歷</button>
+          </div>
+          {(data[lang].items || []).map((item, idx) => (
+            <div key={idx} style={{ marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>第 {idx + 1} 筆</span>
+                <button className="admin-btn admin-btn-danger" style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem' }} onClick={() => removeListItem(lang, 'items', idx)}>刪除</button>
+              </div>
+              <div className="admin-row">
+                <div className="admin-field">
+                  <label>期間</label>
+                  <input className="admin-input" value={item.date} onChange={(e) => setListItem(lang, 'items', idx, 'date', e.target.value)} placeholder="Sep 2026 – Present" />
+                </div>
+                <div className="admin-field">
+                  <label>角色</label>
+                  <input className="admin-input" value={item.role} onChange={(e) => setListItem(lang, 'items', idx, 'role', e.target.value)} />
+                </div>
+              </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>標題</label>
+                <input className="admin-input" value={item.title} onChange={(e) => setListItem(lang, 'items', idx, 'title', e.target.value)} />
+              </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>描述（支援 HTML，如 &lt;br&gt;）</label>
+                <textarea className="admin-textarea" value={item.description} onChange={(e) => setListItem(lang, 'items', idx, 'description', e.target.value)} />
+              </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>詳細內容（可展開；支援 Markdown）</label>
+                <textarea className="admin-textarea" value={item.tooltip || ''} onChange={(e) => setListItem(lang, 'items', idx, 'tooltip', e.target.value)} />
+              </div>
+              <div style={{ marginTop: '0.5rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>連結</label>
+                  <button className="admin-btn admin-btn-secondary" style={{ fontSize: '0.78rem', padding: '0.25rem 0.6rem' }}
+                    onClick={() => setListItem(lang, 'items', idx, 'links', [...(item.links || []), { label: '', url: '' }])}>+ 新增連結</button>
+                </div>
+                {(item.links || []).map((link, li) => (
+                  <div key={li} className="admin-row" style={{ marginBottom: '0.5rem', alignItems: 'center' }}>
+                    <div className="admin-field">
+                      <label>顯示文字</label>
+                      <input className="admin-input" value={link.label} placeholder="📃 View Report"
+                        onChange={(e) => setListItem(lang, 'items', idx, 'links', item.links.map((l, i) => i === li ? { ...l, label: e.target.value } : l))} />
+                    </div>
+                    <div className="admin-field">
+                      <label>URL</label>
+                      <input className="admin-input" value={link.url} placeholder="https://..."
+                        onChange={(e) => setListItem(lang, 'items', idx, 'links', item.links.map((l, i) => i === li ? { ...l, url: e.target.value } : l))} />
+                    </div>
+                    <button className="admin-btn admin-btn-danger" style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', marginTop: '1.35rem', flexShrink: 0 }}
+                      onClick={() => setListItem(lang, 'items', idx, 'links', item.links.filter((_, i) => i !== li))}>✕</button>
+                  </div>
+                ))}
+              </div>
+              <hr className="admin-divider" />
             </div>
           ))}
         </div>
@@ -171,7 +327,7 @@ function WorkExperienceTab({ onSave }) {
   const addItem = (lang) =>
     setData((d) => ({
       ...d,
-      [lang]: { ...d[lang], items: [...d[lang].items, { date: '', position: '', company: '', description: '' }] },
+      [lang]: { ...d[lang], items: [...d[lang].items, { date: '', position: '', company: '', description: '', tooltip: '' }] },
     }));
 
   const removeItem = (lang, idx) =>
@@ -204,7 +360,7 @@ function WorkExperienceTab({ onSave }) {
               <div className="admin-row">
                 <div className="admin-field">
                   <label>期間</label>
-                  <input className="admin-input" value={item.date} onChange={(e) => setItem(lang, idx, 'date', e.target.value)} placeholder="2025.6 - 至今" />
+                  <input className="admin-input" value={item.date} onChange={(e) => setItem(lang, idx, 'date', e.target.value)} placeholder="Jun 2025 – Jun 2026" />
                 </div>
                 <div className="admin-field">
                   <label>職位</label>
@@ -218,6 +374,10 @@ function WorkExperienceTab({ onSave }) {
               <div className="admin-field" style={{ marginTop: '0.5rem' }}>
                 <label>描述（支援 HTML，如 &lt;br&gt;）</label>
                 <textarea className="admin-textarea tall" value={item.description} onChange={(e) => setItem(lang, idx, 'description', e.target.value)} />
+              </div>
+              <div className="admin-field" style={{ marginTop: '0.5rem' }}>
+                <label>詳細內容（可展開；支援 Markdown）</label>
+                <textarea className="admin-textarea tall" value={item.tooltip || ''} onChange={(e) => setItem(lang, idx, 'tooltip', e.target.value)} />
               </div>
               {idx < data[lang].items.length - 1 && <hr className="admin-divider" />}
             </div>
@@ -292,6 +452,7 @@ const EMPTY_ITEM = {
   tags: [],
   links: { github: '', demo: '', video: '', video2: '', paper: '' },
   date: '',
+  priority: '',
 };
 
 function PortfolioItemEditor({ item, idx, onChange, onRemove }) {
@@ -356,6 +517,16 @@ function PortfolioItemEditor({ item, idx, onChange, onRemove }) {
         <div className="admin-field">
           <label>日期</label>
           <input className="admin-input" value={item.date} onChange={(e) => set('date', e.target.value)} placeholder="2025-01-15" />
+        </div>
+        <div className="admin-field">
+          <label>排序優先度（數字越小越前面；空白則依日期）</label>
+          <input
+            className="admin-input"
+            type="number"
+            value={item.priority ?? ''}
+            onChange={(e) => set('priority', e.target.value === '' ? '' : Number(e.target.value))}
+            placeholder="1"
+          />
         </div>
       </div>
 
@@ -609,7 +780,7 @@ function ExperienceTab({ onSave }) {
 // ─── Export tab ───────────────────────────────────────────────────────────────
 function ExportTab({ onSave }) {
   const buildExport = () => {
-    const keys = ['admin_aboutMe', 'admin_education', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio', 'admin_transcript'];
+    const keys = ['admin_aboutMe', 'admin_education', 'admin_research', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio', 'admin_transcript'];
     const result = {};
     keys.forEach((k) => {
       const v = localStorage.getItem(k);
@@ -638,7 +809,7 @@ function ExportTab({ onSave }) {
   };
 
   const clearAll = () => {
-    ['admin_aboutMe', 'admin_education', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio', 'admin_transcript']
+    ['admin_aboutMe', 'admin_education', 'admin_research', 'admin_workExperience', 'admin_skills', 'admin_experience', 'admin_portfolio', 'admin_transcript']
       .forEach((k) => localStorage.removeItem(k));
     setText('');
     onSave('已清除所有 localStorage 暫存');
@@ -684,6 +855,7 @@ function ExportTab({ onSave }) {
 const TABS = [
   { key: 'about', label: '關於我' },
   { key: 'education', label: '學歷' },
+  { key: 'research', label: '研究與論文' },
   { key: 'work', label: '工作經歷' },
   { key: 'skills', label: '技能' },
   { key: 'experience', label: '經驗' },
@@ -720,6 +892,7 @@ const AdminPage = () => {
 
       {tab === 'about' && <AboutMeTab onSave={showToast} />}
       {tab === 'education' && <EducationTab onSave={showToast} />}
+      {tab === 'research' && <ResearchTab onSave={showToast} />}
       {tab === 'work' && <WorkExperienceTab onSave={showToast} />}
       {tab === 'skills' && <SkillsTab onSave={showToast} />}
       {tab === 'experience' && <ExperienceTab onSave={showToast} />}

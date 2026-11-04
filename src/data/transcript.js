@@ -199,6 +199,36 @@ export const transcriptData = {
       "Course": "Japanese (I) (2)",
       "Grade": "A+",
       "Credits": "3"
+    },
+    {
+      "Course": "Applied Deep Learning",
+      "Grade": "A+",
+      "Credits": "3"
+    },
+    {
+      "Course": "Introduction to FinTech",
+      "Grade": "A-",
+      "Credits": "3"
+    },
+    {
+      "Course": "Multimodal Artificial Intelligence",
+      "Grade": "A",
+      "Credits": "3"
+    },
+    {
+      "Course": "Game Theory",
+      "Grade": "A+",
+      "Credits": "2"
+    },
+    {
+      "Course": "Generative Artificial Intelligence Safety",
+      "Grade": "A",
+      "Credits": "3"
+    },
+    {
+      "Course": "Introduction to Communication Complexity",
+      "Grade": "A+",
+      "Credits": "3"
     }
   ],
   "zh": [
@@ -415,6 +445,21 @@ export const transcriptData = {
     {
       "Course": "金融科技導論",
       "Grade": "A-",
+      "Credits": "3"
+    },
+    {
+      "Course": "賽局論",
+      "Grade": "A+",
+      "Credits": "2"
+    },
+    {
+      "Course": "生成式人工智慧安全",
+      "Grade": "A",
+      "Credits": "3"
+    },
+    {
+      "Course": "通訊複雜度概論",
+      "Grade": "A+",
       "Credits": "3"
     }
   ]

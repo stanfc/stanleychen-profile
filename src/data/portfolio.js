@@ -1,8 +1,65 @@
 export const portfolioItems = [
   {
+    "id": "iclr2027-ctta-ovss",
+    "priority": 1,
+    "title": {
+      "zh": "Preventing Collapse in Long-Horizon Continual TTA for Open-Vocabulary Semantic Segmentation",
+      "en": "Preventing Collapse in Long-Horizon Continual TTA for Open-Vocabulary Semantic Segmentation"
+    },
+    "subtitle": {
+      "zh": "ICLR 2027 · 審查中 · 共同第一作者",
+      "en": "ICLR 2027 · Under Review · Co-first Author"
+    },
+    "type": "paper",
+    "description": {
+      "zh": "避免開放詞彙語意分割模型在長時間測試時適應中崩潰。",
+      "en": "Keeps open-vocabulary segmentation models from collapsing during long-horizon test-time adaptation."
+    },
+    "thumbnail": "iclr2027-paper.png",
+    "tags": [
+      "Research",
+      "Computer Vision",
+      "VLM"
+    ],
+    "links": {
+      "paper": "https://openreview.net/forum?id=pHhBlg59AU"
+    },
+    "date": "2026-09-25"
+  },
+  {
+    "id": "ai-city-commander",
+    "priority": 2,
+    "title": {
+      "zh": "AI City Commander 智慧城市事件指揮平台",
+      "en": "AI City Commander"
+    },
+    "subtitle": {
+      "zh": "Python · React · AWS · Bedrock · Terraform",
+      "en": "Python · React · AWS · Bedrock · Terraform"
+    },
+    "type": "github",
+    "description": {
+      "zh": "黑客松專案：以 LLM 輔助城市交通與人流事件應變的指揮平台。",
+      "en": "Hackathon project: an LLM-powered command center for city traffic and crowd incidents."
+    },
+    "thumbnail": "ai-city-commander.png",
+    "tags": [
+      "Python",
+      "React",
+      "AWS",
+      "LLM",
+      "Agent",
+      "Hackathon"
+    ],
+    "links": {
+      "github": "https://github.com/yenyu3/ai-city-commander"
+    },
+    "date": "2026-08-01"
+  },
+  {
     "id": "adl-final",
     "title": {
-      "zh": "ADL 期末：LLM Jailbreak 攻擊（DPO）",
+      "zh": "ADL 期末專案：以 DPO 進行 LLM Jailbreak 攻擊",
       "en": "ADL Final: LLM Jailbreak Attack via DPO"
     },
     "subtitle": {
@@ -11,8 +68,8 @@ export const portfolioItems = [
     },
     "type": "github",
     "description": {
-      "zh": "NTU 深度學習應用課程期末專案。以 DPO 訓練 LLM Rewriter，透過 safety guard 與 usefulness judge 作為 reward signal，使模型學會改寫 prompt 以繞過安全過濾器。",
-      "en": "NTU ADL final project. Trains an LLM rewriter via DPO using safety guard and usefulness judge as reward signals to rewrite prompts that bypass LLM safety filters."
+      "zh": "課程專案：以 DPO 訓練 LLM 改寫 prompt，繞過安全過濾機制。",
+      "en": "Course project: trained an LLM prompt rewriter with DPO to bypass safety filters."
     },
     "thumbnail": "adl-final.png",
     "tags": [
@@ -26,29 +83,29 @@ export const portfolioItems = [
     "links": {
       "github": "https://github.com/joshuachen0213/ADL-Final"
     },
-    "date": "2025-12-15"
+    "date": "2025-12-15",
+    "priority": 5
   },
   {
     "id": "listen-up",
     "title": {
-      "zh": "金曲猜歌王",
+      "zh": "金曲猜歌王 Listen Up",
       "en": "Listen Up — Music Guessing Game"
     },
     "subtitle": {
-      "zh": "Vue.js · Express.js · TypeScript",
-      "en": "Vue.js · Express.js · TypeScript"
+      "zh": "Vue 3 · TypeScript · Express · Docker · Fly.io",
+      "en": "Vue 3 · TypeScript · Express · Docker · Fly.io"
     },
     "type": "github",
     "description": {
-      "zh": "基於 Hitster 桌遊規則的本地多人猜歌遊戲，支援 2-8 人、代幣系統、卡牌時間線排序與挑戰機制。",
-      "en": "Local multiplayer music guessing game based on Hitster rules; supports 2-8 players, token system, timeline card placement, and challenge mechanics."
+      "zh": "個人開發的派對猜歌遊戲：聽歌、猜年份、排時間線，支援 2–20 人。",
+      "en": "Solo-built party game: guess songs and place them on a timeline, for 2–20 players."
     },
     "thumbnail": "listen-up.png",
     "tags": [
       "Vue.js",
       "TypeScript",
-      "Node.js",
-      "Express",
+      "Docker",
       "Game",
       "Personal Project"
     ],
@@ -56,7 +113,8 @@ export const portfolioItems = [
       "github": "https://github.com/stanfc/listen-up",
       "demo": "https://listen-up-purple-pond-1943.fly.dev/"
     },
-    "date": "2026-3-12"
+    "date": "2026-3-12",
+    "priority": 4
   },
   {
     "id": "guardcircle",
@@ -65,28 +123,27 @@ export const portfolioItems = [
       "en": "GuardCircle — Family Anti-Scam App"
     },
     "subtitle": {
-      "zh": "React Native · Go · AWS Lambda",
-      "en": "React Native · Go · AWS Lambda"
+      "zh": "Go · React Native · AWS Lambda · Bedrock · Terraform",
+      "en": "Go · React Native · AWS Lambda · Bedrock · Terraform"
     },
     "type": "github",
     "description": {
-      "zh": "一套家人防詐守護系統，支援文字、網址、電話、圖片、檔案等多模態內容偵測，並提供家庭圈事件總覽與 AI 風險評估。",
-      "en": "Family anti-scam guardian system with multi-modal detection (text, URL, phone, image, file) and AI-powered risk assessment."
+      "zh": "黑客松專案：分析可疑訊息、網址、電話與多媒體內容的家人防詐 App。",
+      "en": "Hackathon project: a family anti-scam app that flags risky messages, links, calls, and media."
     },
     "thumbnail": "guard-circle.png",
     "tags": [
-      "React Native",
-      "TypeScript",
       "Go",
-      "Python",
+      "React Native",
       "AWS",
-      "AI",
-      "Team Project"
+      "LLM",
+      "Hackathon"
     ],
     "links": {
       "github": "https://github.com/yenyu3/guardcircle-app"
     },
-    "date": "2025-03-27"
+    "date": "2026-03-27",
+    "priority": 3
   },
   {
     "id": "vfx",
@@ -98,10 +155,10 @@ export const portfolioItems = [
       "zh": "Blender · HDR · 圖像融合",
       "en": "Blender · HDR · Image Fusion"
     },
-    "type": "video",
+    "type": "course",
     "description": {
-      "zh": "課程作品：實作 HDR、圖像配對與融合，並以 Blender 製作動畫。",
-      "en": "Course projects: HDR, matching/fusion, and Blender animations."
+      "zh": "課程專案：實作 HDR 與影像拼接演算法，並以 Blender 製作動畫。",
+      "en": "Course projects: HDR imaging, image stitching, and Blender animation."
     },
     "thumbnail": "vfx.png",
     "tags": [
@@ -125,13 +182,13 @@ export const portfolioItems = [
       "en": "CAGED Game"
     },
     "subtitle": {
-      "zh": "Game · QA · VFX",
-      "en": "Game · QA · VFX"
+      "zh": "Unity · C# · QA · VFX",
+      "en": "Unity · C# · QA · VFX"
     },
-    "type": "web",
+    "type": "game",
     "description": {
-      "zh": "參與小組開發，負責品質修復及特效。",
-      "en": "Team project; QA and VFX."
+      "zh": "小組遊戲開發，負責品質修正與視覺特效。",
+      "en": "Team game project; I handled QA and visual effects."
     },
     "thumbnail": "caged.png",
     "tags": [
@@ -150,7 +207,7 @@ export const portfolioItems = [
     "id": "yt-emotion",
     "title": {
       "zh": "YouTube 評論情緒分析",
-      "en": "YouTube Comment Emotion Tool"
+      "en": "YouTube Comment Sentiment Tool"
     },
     "subtitle": {
       "zh": "ML · Python",
@@ -158,8 +215,8 @@ export const portfolioItems = [
     },
     "type": "github",
     "description": {
-      "zh": "文字雲與模型訓練腳本，支援自訂語料。",
-      "en": "Word cloud and training scripts; custom datasets supported."
+      "zh": "評論情緒分類與文字雲，附可用自訂語料訓練的腳本。",
+      "en": "Sentiment classification and word clouds for YouTube comments; training scripts support custom datasets."
     },
     "thumbnail": "side_project.png",
     "tags": [
@@ -176,28 +233,30 @@ export const portfolioItems = [
   {
     "id": "special-topic",
     "title": {
-      "zh": "專題研究：使用深度預測改善 Gaussian Splatting",
-      "en": "Special Topic: Gaussian Splatting with Depth Prediction"
+      "zh": "使用深度估計提升 Gaussian Splatting 模型的穩健性",
+      "en": "Using Depth Estimation to Improve Robustness of Gaussian Splatting Models"
     },
     "subtitle": {
-      "zh": "Research · 3D",
-      "en": "Research · 3D"
+      "zh": "大學部專題研究 · 3D",
+      "en": "Undergraduate Research · 3D"
     },
-    "type": "paper",
+    "type": "research",
     "description": {
-      "zh": "以深度估計降低 splatting 噪點，包含方法與結果報告。",
-      "en": "Reduce splatting noise using depth estimation; report included."
+      "zh": "以深度估計修正錯位的 Gaussian，減少渲染瑕疵。",
+      "en": "Uses depth estimation to fix misplaced Gaussians and reduce rendering artifacts."
     },
     "thumbnail": "special_topic.png",
     "tags": [
       "Research",
+      "Computer Vision",
       "Rendering",
       "Team Project"
     ],
     "links": {
       "paper": "https://drive.google.com/file/d/15socf0mkWe1OrEC5ysWpTwXxJ1jAjuEh/view?usp=sharing"
     },
-    "date": "2025-01-15"
+    "date": "2025-01-15",
+    "priority": 6
   },
   {
     "id": "pbrt-lsystem",
@@ -224,7 +283,8 @@ export const portfolioItems = [
     "links": {
       "github": "https://github.com/stanfc/pbrt-plus-v4/tree/l-system"
     },
-    "date": "2025-05-10"
+    "date": "2025-05-10",
+    "priority": 8
   },
   {
     "id": "rag-agent",
@@ -238,8 +298,8 @@ export const portfolioItems = [
     },
     "type": "github",
     "description": {
-      "zh": "LaTeX 助手：讀取 PDF、RAG 問答、工具寫檔。",
-      "en": "LaTeX helper: PDF ingest, RAG QA, file writing."
+      "zh": "LaTeX 助手：讀取 PDF 手冊、以 RAG 回答問題，並透過工具寫入檔案。",
+      "en": "LaTeX assistant: ingests PDF manuals, answers questions with RAG, and writes results to files."
     },
     "thumbnail": "rag.png",
     "tags": [
@@ -252,7 +312,8 @@ export const portfolioItems = [
     "links": {
       "github": "https://github.com/stanfc/agent-project"
     },
-    "date": "2025-04-10"
+    "date": "2025-04-10",
+    "priority": 7
   },
   {
     "id": "research-agent",
@@ -261,13 +322,13 @@ export const portfolioItems = [
       "en": "Deep Research Agent"
     },
     "subtitle": {
-      "zh": "Web · Agent",
-      "en": "Web · Agent"
+      "zh": "Agent · Web Search",
+      "en": "Agent · Web Search"
     },
     "type": "github",
     "description": {
-      "zh": "可自動搜尋網路，精準檢索所需資訊。",
-      "en": "Autonomous web search; precise retrieval."
+      "zh": "可自行搜尋網路並精準檢索所需資訊的 Agent。",
+      "en": "Agent that searches the web on its own and retrieves the information a user needs."
     },
     "thumbnail": "deep_research.png",
     "tags": [
@@ -279,7 +340,8 @@ export const portfolioItems = [
     "links": {
       "github": "https://github.com/stanfc/agent-project"
     },
-    "date": "2025-04-20"
+    "date": "2025-04-20",
+    "priority": 7
   },
   {
     "id": "calendar-app",
@@ -293,8 +355,8 @@ export const portfolioItems = [
     },
     "type": "web",
     "description": {
-      "zh": "前端主要負責；分享與訂閱。",
-      "en": "Frontend lead; sharing & subscription."
+      "zh": "行事曆分享與訂閱平台，主要負責前端開發。",
+      "en": "Calendar sharing and subscription platform; I led frontend development."
     },
     "thumbnail": "calendar.png",
     "tags": [
@@ -307,35 +369,6 @@ export const portfolioItems = [
       "paper": "https://drive.google.com/file/d/1UOdeThkxDmk1_2xY83AmGwgHIregeKoH/view?usp=sharing"
     },
     "date": "2024-06-15"
-  },
-  {
-    "id": "LLM-based-pdf-reader-app",
-    "title": {
-      "zh": "IspBirntg 基於 LLM 的 PDF 閱讀器",
-      "en": "IspBirntg LLM-based PDF Reader"
-    },
-    "subtitle": {
-      "zh": "React · Django",
-      "en": "React · Django"
-    },
-    "type": "web",
-    "description": {
-      "zh": "本地部屬基於 LLM 的 PDF 閱讀器，支援多模態以及 RAG",
-      "en": "Self-hosted LLM-based PDF reader with multi-modal and RAG support"
-    },
-    "thumbnail": "ispbirntg.png",
-    "tags": [
-      "React",
-      "Web",
-      "Django",
-      "Side Project",
-      "LLM",
-      "RAG"
-    ],
-    "links": {
-      "github": "https://github.com/stanfc/IspBirntg"
-    },
-    "date": "2025-09-15"
   }
 ];
 

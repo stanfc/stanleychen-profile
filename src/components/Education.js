@@ -17,6 +17,9 @@ const Education = ({ currentLang }) => {
           <div className="timeline-title">{item.school}</div>
           <div className="timeline-company">{item.department}</div>
           {item.gpa && <div className="timeline-description">{item.gpa}</div>}
+          {item.details && (
+            <div className="timeline-description" dangerouslySetInnerHTML={{ __html: item.details }} />
+          )}
         </div>
       ))}
     </div>

@@ -49,6 +49,14 @@ const handlers = {
     console.log('✅ education.js');
   },
 
+  admin_research(data) {
+    const file = path.join(dataDir, 'research.js');
+    const content = fs.readFileSync(file, 'utf-8');
+    const updated = replaceExport(content, 'researchData', data);
+    fs.writeFileSync(file, updated);
+    console.log('✅ research.js');
+  },
+
   admin_workExperience(data) {
     const file = path.join(dataDir, 'workExperience.js');
     const content = fs.readFileSync(file, 'utf-8');

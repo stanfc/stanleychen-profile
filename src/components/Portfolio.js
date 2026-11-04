@@ -16,6 +16,20 @@ export const getItems = (lang) => {
   }));
 };
 
+// "2026-3-12" / "2026-03-12" → comparable number (invalid dates sort last)
+const dateValue = (d) => {
+  const [y = 0, m = 1, day = 1] = String(d || '').split('-').map((n) => parseInt(n, 10) || 0);
+  return y * 10000 + m * 100 + day;
+};
+
+// Default order: explicit priority first (lower = more prominent), then newest first
+export const sortByRelevance = (a, b) => {
+  const pa = Number.isFinite(Number(a.priority)) && a.priority !== '' && a.priority != null ? Number(a.priority) : Infinity;
+  const pb = Number.isFinite(Number(b.priority)) && b.priority !== '' && b.priority != null ? Number(b.priority) : Infinity;
+  if (pa !== pb) return pa - pb;
+  return dateValue(b.date) - dateValue(a.date);
+};
+
 function useAllTags(items) {
   return useMemo(() => {
     const set = new Set();
@@ -27,19 +41,17 @@ function useAllTags(items) {
 const Portfolio = ({ currentLang }) => {
   const [query, setQuery] = useState('');
   const [activeTags, setActiveTags] = useState([]);
-  const [sortBy, setSortBy] = useState('az'); // default to A-Z without date
 
   const items = getItems(currentLang);
   const allTags = useAllTags(items);
 
   const filtered = useMemo(() => {
-    let list = items.filter((i) =>
+    const list = items.filter((i) =>
       (activeTags.length === 0 || activeTags.every((t) => i.tags?.includes(t))) &&
       (query.trim() === '' || `${i.title} ${i.subtitle ?? ''} ${i.description ?? ''} ${(i.tags ?? []).join(' ')}`.toLowerCase().includes(query.toLowerCase()))
     );
-    list = list.sort((a, b) => a.title.localeCompare(b.title));
-    return list;
-  }, [items, query, activeTags, sortBy]);
+    return [...list].sort(sortByRelevance);
+  }, [items, query, activeTags]);
 
   const toggleTag = (t) =>
     setActiveTags((tags) => (tags.includes(t) ? tags.filter((x) => x !== t) : [...tags, t]));
@@ -87,7 +99,13 @@ const Portfolio = ({ currentLang }) => {
           <div key={item.id} className="card" style={{ padding: 0, overflow: 'hidden', height: '100%' }}>
             <div className="relative" style={{ position: 'relative', width: '100%', aspectRatio: '16/9', background: 'var(--bg-secondary)' }}>
               {item.thumbnail ? (
-                <img src={item.thumbnail} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
               ) : (
                 <div style={{ width: '100%', height: '100%', background: 'var(--bg-overlay)' }} />
               )}
@@ -120,7 +138,9 @@ const Portfolio = ({ currentLang }) => {
                   <a className="link-button" href={item.links.video2} target="_blank" rel="noreferrer">{currentLang === 'zh' ? '影片 2' : 'Video 2'}</a>
                 )}
                 {item.links?.paper && (
-                  <a className="link-button" href={item.links.paper} target="_blank" rel="noreferrer">{currentLang === 'zh' ? '報告/PDF' : 'Report/PDF'}</a>
+                  <a className="link-button" href={item.links.paper} target="_blank" rel="noreferrer">
+                    {item.links.paper.includes('openreview.net') ? 'OpenReview' : (currentLang === 'zh' ? '報告/PDF' : 'Report/PDF')}
+                  </a>
                 )}
               </div>
             </div>

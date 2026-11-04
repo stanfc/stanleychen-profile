@@ -1,7 +1,7 @@
 {
   "name": "stanleychen-profile",
   "version": "1.0.0",
-  "description": "Stanley Chen's personal portfolio website built with React",
+  "description": "Shuan-Shaw Chen's personal portfolio website built with React",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

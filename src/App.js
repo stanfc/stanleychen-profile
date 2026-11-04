@@ -23,13 +23,13 @@ function App() {
   useEffect(() => {
     const savedLang = localStorage.getItem('lang') || 'en';
     setCurrentLang(savedLang);
-    document.title = currentLang === 'zh' ? '陳璿修 - 個人履歷' : 'Stanley Chen - Resume';
+    document.title = currentLang === 'zh' ? '陳璿修 - 個人作品集' : 'Shuan-Shaw Chen - Portfolio';
   }, [currentLang]);
 
   const handleLanguageChange = (lang) => {
     setCurrentLang(lang);
     localStorage.setItem('lang', lang);
-    document.title = lang === 'zh' ? '陳璿修 - 個人履歷' : 'Stanley Chen - Resume';
+    document.title = lang === 'zh' ? '陳璿修 - 個人作品集' : 'Shuan-Shaw Chen - Portfolio';
   };
 
   const toggleDrawer = () => {

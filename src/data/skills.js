@@ -1,30 +1,30 @@
 export const skillsData = {
-  labels: {
-    zh: {
-      title: "技能專長",
-      categories: {
-        programming: "程式語言",
-        frameworks: "框架工具",
-        development: "開發領域",
-        other: "其他技能",
-      },
+  "labels": {
+    "zh": {
+      "title": "技能專長",
+      "categories": {
+        "programming": "程式語言",
+        "ai": "AI / 研究",
+        "backend": "後端 / 基礎架構",
+        "frontend": "前端 / 其他"
+      }
     },
-    en: {
-      title: "Technical Skills",
-      categories: {
-        programming: "Programming Languages",
-        frameworks: "Frameworks & Tools",
-        development: "Development Areas",
-        other: "Other Skills",
-      },
-    },
+    "en": {
+      "title": "Technical Skills",
+      "categories": {
+        "programming": "Programming",
+        "ai": "AI / Research",
+        "backend": "Backend / Infrastructure",
+        "frontend": "Frontend / Other"
+      }
+    }
   },
-  skillsByCategory: {
-    programming: ['C/C++', 'Python', 'Java', 'C#', 'JavaScript', 'HTML', 'SQL'],
-    frameworks: ['Django', 'React.js', 'Node.js', 'Git', 'Docker'],
-    development: ['Backend development', 'Frontend development', 'Database', 'ML', 'Gen AI', 'Computer vision', 'Rendering', 'VFX', 'Game programming'],
-    other: ['Unity', 'Blender', 'Z3', 'Spin', 'LangChain', 'llama-index'],
-  },
+  "skillsByCategory": {
+    "programming": ["Python", "C/C++", "Go", "TypeScript / JavaScript", "C#"],
+    "ai": ["PyTorch", "CLIP", "MMSegmentation", "OpenCV", "LLM Agents", "RAG"],
+    "backend": ["Django", "PostgreSQL", "Redis", "Celery", "Docker", "AWS", "Terraform", "Git", "Linux"],
+    "frontend": ["React", "React Native", "Vue", "Node.js / Express", "Unity", "Blender"]
+  }
 };
 
 const STORAGE_KEY = 'admin_skills';
